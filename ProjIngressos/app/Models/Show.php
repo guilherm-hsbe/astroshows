@@ -13,7 +13,8 @@ class Show extends Model
         'qtd_ingressos',
         'data',
         'horario_i',
-        'horario_f'
-        
+        'horario_f',
+        'artista_id',
+        'local_id',        
     ];
 }
