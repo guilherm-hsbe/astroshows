@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('show', function (Blueprint $table) {
             $table->id();
             $table->integer('qtd_ingressos');
-            $table->data();
-            $table->horario_i();
-            $table->horario_f();
+            $table->date('data');
+            $table->datetime('horario_i');
+            $table->datetime('horario_f');
             $table->artista_id();
             $table->foreignId();
             $table->timestamps();
