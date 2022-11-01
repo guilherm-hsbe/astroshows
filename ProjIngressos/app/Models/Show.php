@@ -17,4 +17,18 @@ class Show extends Model
         'artista_id',
         'local_id',        
     ];
+    public function artista(){
+        return $this->belongsTo(Artista::class);
+    }
+
+    public function local(){
+        return $this->belongsTo(Local::class);
+    }
+
+    public function ingressosShow(){
+
+        return $this->belongsToMany(Compras::class, 'compra_produtos', 'produtos_id', 'compras_id')
+                        ->withPivot('quantidade', 'preco')
+                        ->withTimestamps();
+    }
 }
