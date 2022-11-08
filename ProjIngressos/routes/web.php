@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 // Controllers
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArtistaController;
+use App\Http\Controllers\LocalController;
+use App\Http\Controllers\ShowController;
+use App\Http\Controllers\IngressoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/',[HomeController::class,'home'])->name('site.home');
+Route::get('/artista',[ArtistaController::class,'artista'])->name('site.artista');
+Route::get('/local',[LocalController::class,'local'])->name('site.local');
+Route::get('/show',[ShowController::class,'show'])->name('site.show');
+Route::get('/ingresso',[IngressoController::class,'ingresso'])->name('site.ingresso');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

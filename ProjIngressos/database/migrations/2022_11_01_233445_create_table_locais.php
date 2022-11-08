@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_artista', function (Blueprint $table) {
+        Schema::create('locais', function (Blueprint $table) {
             $table->id();
+            $table->string("endereco", 100);
+            $table->string("cidade", 50);
+            $table->string("estado", 40);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_artista');
+        Schema::dropIfExists('locais');
     }
 };

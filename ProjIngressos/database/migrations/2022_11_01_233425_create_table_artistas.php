@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_local', function (Blueprint $table) {
+        Schema::create('artistas', function (Blueprint $table) {
             $table->id();
+            $table->string("nome_artistico", 50);
+            $table->string("descricao", 150);
+            $table->string('imagem');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_local');
+        Schema::dropIfExists('artistas');
     }
 };

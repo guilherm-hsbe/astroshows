@@ -44,4 +44,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Envia Chave Estrangeira -> Ingressos
+    public function ingressosUser(){
+
+        return $this->belongsToMany(Show::class, 'ingressos', 'shows_id', 'users_id')
+                        ->withPivot('preco','data_compra')
+                        ->withTimestamps();
+    }
 }

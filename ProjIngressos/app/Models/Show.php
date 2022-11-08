@@ -9,7 +9,6 @@ class Show extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id',
         'qtd_ingressos',
         'data',
         'horario_i',
@@ -27,8 +26,8 @@ class Show extends Model
 
     public function ingressosShow(){
 
-        return $this->belongsToMany(User::class, 'ingressos', 'show_id', 'user_id')
-                        ->withPivot('data', 'preco')
+        return $this->belongsToMany(User::class, 'ingressos', 'shows_id', 'users_id')
+                        ->withPivot('preco','data_compra')
                         ->withTimestamps();
     }
 }

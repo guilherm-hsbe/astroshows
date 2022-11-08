@@ -40,22 +40,22 @@
 
       <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: space-between !important">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
+          <li class="nav-item active {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}">
+            <a class="nav-link" href="{{ route('site.home') }}"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">Artistas</a>
+          <li class="nav-item {{ (Route::current()->getName() === 'site.artista' ? ' active' : '') }}">
+            <a class="nav-link" href="{{ route('site.artista') }}">Artistas</a>
+          </li>
+
+          <li class="nav-item {{ (Route::current()->getName() === 'site.local' ? ' active' : '') }}">
+            <a class="nav-link" href="{{ route('site.local') }}">Locais</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Locais</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
+            <a class="nav-link" href="">Contato</a>
           </li>
         </ul>
 
