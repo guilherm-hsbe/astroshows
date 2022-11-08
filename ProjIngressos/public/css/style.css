@@ -28,17 +28,9 @@ transition: opacity 0s 2.6s;
     background: linear-gradient(270deg, rgba(0,0,0,0.22452731092436973) 0%, rgba(255,255,255,0) 75%);;
     transition: 1s;
 }
-* {
-    margin: 0;
-    padding: 0;
-  }
+
   
-  body {
-    padding: 20px;
-    background: #eee;
-    user-select: none;
-  }
-  
+
   [type=radio] {
     display: none;
   }
