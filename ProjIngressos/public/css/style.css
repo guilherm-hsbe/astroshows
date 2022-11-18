@@ -29,6 +29,21 @@ transition: opacity 0s 2.6s;
     transition: 1s;
 }
 
+.img-back {
+  height: 100vh;
+  background-image: url("https://static.itapemafm.com.br/s3fs-public/graphql-upload-files/11%20Those%20Girls%20%5BApple%20ProRes%20422%20HQ%5D%20%28Live%20in%20Studio%29.00_00_54_22.Still003_5.jpg?z92Ayst7OLVKSTpe3hIxDatchDqHlhcd");
+}
+
+.transp-input input,textarea {
+  background-color: #171717ee !important;
+  color: rgb(240, 240, 240) !important;
+  border: 0 !important;
+}
+
+.transp-input ::placeholder {
+  color:#ffffff8b
+}
+
   
 
   [type=radio] {

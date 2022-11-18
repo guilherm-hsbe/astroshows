@@ -54,8 +54,8 @@
             <a class="nav-link" href="{{ route('site.local') }}">Locais</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="">Contato</a>
+          <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}">
+            <a class="nav-link" href="{{ route('site.contatos') }}">Contato</a>
           </li>
         </ul>
 
