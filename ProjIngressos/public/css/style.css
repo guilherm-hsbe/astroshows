@@ -44,6 +44,22 @@ transition: opacity 0s 2.6s;
   color:#ffffff8b
 }
 
+.card-fit img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-fit input,label {
+  height: 100%;
+}
+
+.text-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
   
 
   [type=radio] {
