@@ -1,0 +1,334 @@
+	Softwares
+*Composer
+*Node.js
+*Laravel ()
+*Apache (XAMP,WAMP...)
+*Visual Code (softwares e plugins: Composer, Laravel)
+
+|-------------------------------------------------------------|
+
+	Comando terminal (instalar composer manual)
+> php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+> php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+> php composer-setup.php
+> php -r "unlink('composer-setup.php');"
+
+|-------------------------------------------------------------|
+
+	Criar projeto
+-Entrar pasta projeto
+   -Clique direito + shift: abrir no shell
+   -Utilizando cmd (apenas navegar entre pastas)
+   -Utilizando console do Editor
+> composer create-project laravel/laravel NomeProjeto
+> composer create-project --prefer-dist laravel/laravel projeto v7.* (especificar prefer-dist para versão específica)
+> laravel new nomedoprojeto
+
+|-------------------------------------------------------------|
+
+	Deletar Projeto
+-Sair da pasta do projeto ("cd..") para visualizar no "dir"
+> rmdir /s NomeDaPasta
+
+|-------------------------------------------------------------|
+
+	Criar Controller/Model/View
+-Entrar pasta projeto
+> php artisan make:controller NomeController
+> php artisan make:model NomeModel
+> php artisan make:model -m NomeModel (também cria a migration)
+-Gerar view com extensão ".blade.php"
+
+|-------------------------------------------------------------|
+
+	Node
+-No CMD do projeto
+> node -v (checar versão)
+> npm install
+> npm run dev (processo laravel. Rodar após alterações nos "style.css")
+> npm install laravel-mix --save-dev (processo laravel. Rodar após criar ou modificar arquivos "package.json", "webpack.mix.js", pasta "images" e arquivo "style.css")
+
+|-------------------------------------------------------------|
+
+	GitHub (arquivo "gitignore" ignorando pastas)
+-Retomar pasta vendor
+> composer update
+
+-Retomar node_modules
+> npm install
+
+-Retomar pasta env
+> clonar pasta ".env.example" e renomear ".env"
+> no console: php artisan key:generate (gerar chave)
+
+|-------------------------------------------------------------|
+
+	Ajuste "package" e "webpack"
+-Modificação arquivo "package.json":
+>
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.54.8",
+        "sass-loader": "^12.1.0"
+    }
+}
+<
+
+-Criar arquivo "webpack.mix.js":
+> const mix = require('laravel-mix');
+
+-Conteúdo do arquivo
+>
+/*
+ |--------------------------------------------------------------------------
+ | Mix Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Mix provides a clean, fluent API for defining some Webpack build steps
+ | for your Laravel applications. By default, we are compiling the CSS
+ | file for the application as well as bundling up all the JS files.
+ |
+ */
+
+mix
+    .js('resources/js/app.js', 'public/js')
+    .copy('resources/images', 'public/images')
+    .postCss('resources/css/app.css', 'public/css')
+    .postCss('resources/css/style.css', 'public/css');
+<
+
+|-------------------------------------------------------------|
+
+	Preparar Vite
+-No CMD do projeto
+> npm install --save-dev vite laravel-vite-plugin
+
+-Remover LaravelMix
+> npm remove laravel-mix
+
+-Remover webpack
+> del webpack.mix.js
+
+-Modificação em "package.json"
+>
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.6.0",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.6",
+        "tailwindcss": "^3.1.0",
+        "vite": "^3.0.0"
+    }
+}
+<
+
+-Modificação em "vite.config.js"
+>
+ 'resources/css/app.css', 
+ 'resources/js/app.js',
+ 'resources/css/style.css'
+<
+
+-Copiar para "public" o conteúdo de imagens em "resources" (arquivo "app.js")
+>
+ import.meta.glob([
+     '../images/*'
+ ]);
+<
+
+-Rodar vite (se não rodar: inserir "npm install")
+> npm run build
+
+- para referenciar a imagem, usar: 
+> {{ Vite::asset('resources/images/imagem.png') }}
+
+- para incluir o css e js, usar:
+> @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
+|-------------------------------------------------------------|
+
+	Breeze
+-Instalar dependências breeze
+> composer require laravel/breeze --dev
+
+-Instalar breeze
+> php .\artisan breeze:install
+
+-Migração
+> php .\artisan migrate:status
+
+-Tradução breeze
+> composer require lucascudo/laravel-pt-BR-localization --dev
+> php artisan vendor:publish --tag=laravel-pt-br-localization
+
+-Modificar "config/app.php"
+> 'timezone' => 'America/Sao_Paulo',
+> trocar locale para pt-BR
+
+|-------------------------------------------------------------|
+
+	Mail Trap
+-Após login
+-Navegar: "Sandbox > Inboxes"
+-Selecionar Integrations: "Laravel 7+"
+-Copiar texto da caixa
+
+-Modificar ".env"
+-Colar configs nos respectivos campos
+
+|-------------------------------------------------------------|
+
+	Roteiro Vite Versão Professor
+
+Roteiro autenticação com Vite
+
+- Criar o projeto
+> laravel new nomeProjeto
+
+- Criar o banco de dados no phpMyAdmin
+
+- instalar node no projeto
+> npm install
+
+- criar a pasta images em resources
+
+- criar style.css em resources/css
+
+- converter projeto com laravel-mix para vite (https://morioh.com/p/72d0f4bc6122)
+> npm install --save-dev vite laravel-vite-plugin
+> npm remove laravel-mix && del webpack.mix.js
+
+-- alterar package.json
+--
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.6.0",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.6",
+        "tailwindcss": "^3.1.0",
+        "vite": "^3.0.0"
+    }
+}
+--
+
+- alterar o vite.config.js
+--
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: [
+                'resources/css/app.css',
+                'resources/css/style.css',
+                'resources/js/app.js',
+            ],
+            refresh: true,
+        }),
+    ],
+});
+--
+
+- incluir no resource/js/app.js
+--
+import.meta.glob([
+  '../images/**'
+]);
+--
+
+- para referenciar a imagem, usar: 
+> {{ Vite::asset('resources/images/imagem.png') }}
+
+- para incluir o css e js, usar:
+> @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+- executar build do node
+> npm run build (cria o ambiente de produção compilado)
+> npm run dev (compila os assets)
+
+- Autenticação com Breeze
+-- baixar dependências e instalar o breeze
+> composer require laravel/breeze --dev
+> php artisan breeze:install
+> npm install
+> npm run build
+> php artisan migrate
+
+- criar o campo role (papel) na tabela user (alterar no migration)
+--- poderá ser cliente e administrador
+> php artisan migrate:fresh
+
+-- acrescentar o campo 'role' ao models User.php
+
+-- traduzir as mensagens (pesquisar uma traduação e copiar a pasta) 
+--- ex: git Lucas Rocha (https://github.com/lucascudo/laravel-pt-BR-localization)
+
+-- Instale o pacote
+> composer require lucascudo/laravel-pt-br-localization --dev
+
+-- Publique as traduções
+> php artisan vendor:publish --tag=laravel-pt-br-localization
+
+-- Configure o Framework para utilizar 'pt-BR' como linguagem padrão
+> Altere Linha 85 do arquivo config/app.php para: 'locale' => 'pt-BR',
+
+-- Caso deseje, configure o Framework para utilizar 'America/Sao_Paulo' como data hora padrão
+> Altere Linha 72 do arquivo config/app.php para: 'timezone' => 'America/Sao_Paulo',
+
+-- rode o server novamente
+> php artisan serve
+
+
+- EMail para teste
+-- criar conta em mailtrap.io
+-- copiar configuração para Laravel7+ em Sandbox/My Inbox
+-- colar dados no aquivo .env do projeto
+--
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=67c3b986a771e6
+MAIL_PASSWORD=f854535d62c9bb
+MAIL_ENCRYPTION=tls
+--
+
+|-------------------------------------------------------------|
+
+
+
+
