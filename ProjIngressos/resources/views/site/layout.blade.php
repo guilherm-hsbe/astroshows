@@ -15,7 +15,7 @@
     />
 
     <!-- Css -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+    @vite(['public/css/style.css'])
 
     <!-- Favicon -->
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/146/146074.png">

@@ -12,7 +12,7 @@
 
   <div class="carousel-inner" style="height:94.2vh">
     <div class="carousel-item active" data-interval="10000">
-      <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/scott-min.jpg') }}" alt="First slide">
+      <img class="d-block w-100" src="{{ Vite::asset('public/images/artistas/scott-min.jpg') }}" alt="First slide">
 
       <div class="carousel-caption d-none d-md-block ">
           <h3>Travis Scott</h3>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="carousel-item" data-interval="10000">
-      <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/skrillex.jpg') }}" alt="Second slide">
+      <img class="d-block w-100" src="{{ Vite::asset('public/images/artistas/skrillex.jpg') }}" alt="Second slide">
 
       <div class="carousel-caption d-none d-md-block">
           <h3>Skrillex</h3>
@@ -32,7 +32,7 @@
     </div>
 
       <div class="carousel-item" data-interval="10000">
-        <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/lamar.jpg') }}" alt="Third slide">
+        <img class="d-block w-100" src="{{ Vite::asset('public/images/artistas/lamar.jpg') }}" alt="Third slide">
         
         <div class="carousel-caption d-none d-md-block">
             <h3>Kendrick Lamar</h3>
