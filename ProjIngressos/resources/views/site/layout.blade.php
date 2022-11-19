@@ -60,7 +60,8 @@
         </ul>
 
         <div>
-            <button class="btn btn-sm btn-outline-light" type="submit">Perfil</button>
+            
+          
         </div>
       </div>
     </nav>
