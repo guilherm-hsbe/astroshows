@@ -22,7 +22,7 @@
     </div>
 
     <div class="carousel-item" data-interval="10000">
-      <img class="d-block w-100" src="{{ asset('images/artistas/skrillex.jpg') }}" alt="Second slide">
+      <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/skrillex.jpg') }}" alt="Second slide">
 
       <div class="carousel-caption d-none d-md-block">
           <h3>Skrillex</h3>
@@ -32,7 +32,7 @@
     </div>
 
       <div class="carousel-item" data-interval="10000">
-        <img class="d-block w-100" src="{{ asset('images/artistas/lamar.jpg') }}" alt="Third slide">
+        <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/lamar.jpg') }}" alt="Third slide">
         
         <div class="carousel-caption d-none d-md-block">
             <h3>Kendrick Lamar</h3>
