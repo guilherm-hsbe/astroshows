@@ -36,6 +36,11 @@ transition: opacity 0s 2.6s;
   background-image: url("https://static.itapemafm.com.br/s3fs-public/graphql-upload-files/11%20Those%20Girls%20%5BApple%20ProRes%20422%20HQ%5D%20%28Live%20in%20Studio%29.00_00_54_22.Still003_5.jpg?z92Ayst7OLVKSTpe3hIxDatchDqHlhcd");
 }
 
+.img-backgroundingressos {
+  height: 100vh;
+  background-image: url("https://discover.ticketmaster.com.au/wp-content/uploads/2020/10/live-stream-gigs-2020.jpg");
+}
+
 .transp-input input,textarea {
   background-color: #171717ee !important;
   color: rgb(240, 240, 240) !important;

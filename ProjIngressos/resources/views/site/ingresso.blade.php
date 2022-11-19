@@ -4,12 +4,14 @@
 
 
 <!-- foreach ($artistas as $artista) -->
-<div style="display: flex;
+<div class="img-backgroundingressos" 
+    style="display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top:10%;">
-
+    margin-top:10%;"
+    >
+<!-- Conferir se a class foi aplicada adicionando background image -->
     <form style="background-color: black; opacity:0.8; padding:30px; border-radius:30px">
 
       <!-- Nome do show -->
