@@ -29,21 +29,17 @@
           </div>
           <div class="form-group">
             <label for="telefoneContato">Telefone</label>
-            <input type="number" class="form-control" id="telefoneContato" name="telefoneContato" placeholder="18988058371">
+            <input type="number" class="form-control" id="telefoneContato" name="telefoneContato" placeholder="18988058371" maxlength="12">
           </div>
           <div class="form-group">
             <label for="mensagemContato">Mensagem</label>
             <textarea class="form-control" id="mensagemContato" name="mensagemContato" rows="3" placeholder="Escreva sua mensagem..."></textarea>
           </div>
+
           <button type="submit" class="btn btn-outline-light mb-2" value="Enviar">Enviar</button>
       </form>
   </div>
   <hr>
-  {{-- <div class="container">
-      <p>Email: {{ $email }}</p>
-      <p>Telefone: {{ $telefone }}</p>
-      <p>Mensagem: {{ $mensagem }}</p>
-  </div> --}}
 </div>
 
 @endsection

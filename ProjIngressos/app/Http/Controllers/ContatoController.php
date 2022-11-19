@@ -9,14 +9,15 @@ use App\Models\Contato;
 class ContatoController extends Controller
 {
     public function index() {
-        $contato = Contato::all();
+        // $contato = Contato::all();
 
-        return view('site.contatos', ['contato' => $contato]);
+        // return view('site.contatos', ['contato' => $contato]);
+
+        return view('site.contatos');
     }
 
     public function store(Request $request) {
         $contato = new Contato;
-
         $contato->nome = $request->nomeContato;
         $contato->email = $request->emailContato;
         $contato->telefone = $request->telefoneContato;

@@ -7,7 +7,7 @@
     <hr class="my-4">
 </div>
 
-<div class="container p-5 mt-5">
+<div class="container p-5 mt-5" style="height: 100%">
     <a class="btn btn-outline-primary" href=""> Voltar</a>
     <p></p>
     @if ($message = Session::get('success'))

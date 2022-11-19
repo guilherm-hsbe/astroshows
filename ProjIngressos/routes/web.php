@@ -30,9 +30,9 @@ Route::get('/show',[ShowController::class,'show'])->name('site.show');
 Route::get('/ingresso',[IngressoController::class,'ingresso'])->name('site.ingresso');
 
 // Rotas Contatos
-Route::get('/contatos', [ContatoController::class,'index'])->name('site.contatos');
-Route::post('/contatos', [ContatoController::class,'store'])->name('site.contatos');
-Route::resource('contatosmanager', ContatoManagerController::class); //CRUD contatos
+Route::get('/contatos',[ContatoController::class,'index'])->name('site.contatos');
+Route::post('/contatos',[ContatoController::class,'store'])->name('site.contatos');
+Route::resource('contatosmanager',ContatoManagerController::class); //CRUD contatos
 
 // Route::get('/', function () {
 //     return view('welcome');
