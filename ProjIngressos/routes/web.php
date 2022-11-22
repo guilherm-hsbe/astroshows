@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
 
 // Controllers
 use App\Http\Controllers\HomeController;
@@ -12,6 +12,7 @@ use App\Http\Controllers\ShowController;
 use App\Http\Controllers\IngressoController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\ContatoManagerController;
+use App\Http\Controllers\ShowManagerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,7 @@ Route::get('/artista',[ArtistaController::class,'artista'])->name('site.artista'
 Route::resource('artistasmanager',ArtistaManagerController::class); //CRUD artistas
 
 Route::get('/local',[LocalController::class,'local'])->name('site.local');
-Route::get('/show',[ShowController::class,'show'])->name('site.show');
+
 Route::get('/ingresso',[IngressoController::class,'ingresso'])->name('site.ingresso');
 
 // Contatos
@@ -41,6 +42,10 @@ Route::get('/contatos',[ContatoController::class,'index'])->name('site.contatos'
 Route::post('/contatos',[ContatoController::class,'store'])->name('site.contatos');
 
 Route::resource('contatosmanager',ContatoManagerController::class); //CRUD contatos
+
+// Shows
+Route::get('/show',[ShowController::class,'show'])->name('site.show');
+Route::resource('showsmanager',ShowManagerController::class); //CRUD contatos
 
 // Route::get('/', function () {
 //     return view('welcome');

@@ -60,8 +60,9 @@
         </ul>
 
         <div>
-            
-        <button class="btn btn-sm btn-outline-light" type="submit">Perfil</button>
+           
+        <a class="nav-link btn btn-sm btn-outline-light" href="{{ route('site.adm') }}">Administrativo</a>
+          <button class="btn btn-sm btn-outline-light" type="submit">Perfil</button>
 
         </div>
       </div>
