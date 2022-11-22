@@ -40,7 +40,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagem:</strong>
-                    <input type="file" name="imagem" value="{{ $artista->imagem }}" class="form-control" placeholder="Imagem">
+                    <input type="text" name="imagem" value="{{ $artista->imagem }}" class="form-control" placeholder="Imagem">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
