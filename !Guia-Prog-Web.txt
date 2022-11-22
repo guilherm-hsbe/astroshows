@@ -203,7 +203,7 @@ mix
 
 |-------------------------------------------------------------|
 
-	Roteiro Vite Versão Professor
+	Roteiro Vite/Breeze/MailTrap Versão do Professor Paulo
 
 Roteiro autenticação com Vite
 
