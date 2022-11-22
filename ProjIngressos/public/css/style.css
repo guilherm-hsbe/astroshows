@@ -51,9 +51,14 @@ transition: opacity 0s 2.6s;
   color:#ffffff8b
 }
 
+.card-fit label {
+  background:#00000000 !important
+}
+
 .card-fit img {
   width: 100%;
   object-fit: cover;
+  border-radius: 10px
 }
 
 .card-fit input,label {
