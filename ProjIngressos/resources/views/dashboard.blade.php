@@ -10,8 +10,12 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
-                    
+
+
                 </div>
+                <li class="nav-item active {{ (Route::current()->getName() === 'site.home' ? ' active' : '') }}">
+                    <a class="nav-link" href="{{ route('site.home') }}">Home</a>
+                </li>
             </div>
         </div>
     </div>

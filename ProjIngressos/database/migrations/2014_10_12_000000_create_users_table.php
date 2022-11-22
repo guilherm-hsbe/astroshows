@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('cpf');
-            $table->string('tipo');
-            $table->date('datanasc');
+            // $table->string('cpf');
+            // $table->string('tipo');
+            // $table->date('datanasc');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
