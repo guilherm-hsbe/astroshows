@@ -21,9 +21,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'datanasc',
-        'cpf',
-        'tipo'
     ];
 
     /**

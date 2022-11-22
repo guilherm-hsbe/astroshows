@@ -4,6 +4,7 @@
 
 // Controllers
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AutentController;
 use App\Http\Controllers\ArtistaController;
 use App\Http\Controllers\ArtistaManagerController;
 use App\Http\Controllers\LocalController;
@@ -25,7 +26,8 @@ use App\Http\Controllers\ShowManagerController;
 */
 
 // Gerais
-Route::get('/',[HomeController::class,'home'])->name('site.home');
+Route::get('/',[AutentController::class,'home'])->name('site.autent');
+Route::get('/home',[HomeController::class,'home'])->name('site.home');
 
 // Artistas
 Route::get('/artista',[ArtistaController::class,'artista'])->name('site.artista');
@@ -38,6 +40,7 @@ Route::get('/ingresso',[IngressoController::class,'ingresso'])->name('site.ingre
 // Contatos
 Route::get('/contatos',[ContatoController::class,'index'])->name('site.contatos');
 Route::post('/contatos',[ContatoController::class,'store'])->name('site.contatos');
+
 Route::resource('contatosmanager',ContatoManagerController::class); //CRUD contatos
 
 // Shows
@@ -48,8 +51,8 @@ Route::resource('showsmanager',ShowManagerController::class); //CRUD contatos
 //     return view('welcome');
 // });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';
