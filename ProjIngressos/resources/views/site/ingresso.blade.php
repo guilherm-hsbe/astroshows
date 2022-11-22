@@ -7,9 +7,7 @@
 <div class="img-backgroundingressos" 
     style="display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top:10%;"
+    align-items: center;"
     >
 <!-- Conferir se a class foi aplicada adicionando background image -->
     <form style="background-color: black; opacity:0.8; padding:30px; border-radius:30px">
