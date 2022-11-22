@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div class="card-group" style="background-color: black; opacity:0.9; padding:30px; border-radius:30px" >
+<div class="card-group" style="background-color: black; opacity:0.9; padding:30px; border-radius:30px">
+
   @foreach ($artistas as $artista)
     <div class="card">
       <img src="{{ asset($artista->imagem) }}" class="card-img-top" style="opacity:1.0 !important">
@@ -16,6 +17,6 @@
     </div>
   @endforeach
 
-  </div>
+</div>
 
 @endsection  
