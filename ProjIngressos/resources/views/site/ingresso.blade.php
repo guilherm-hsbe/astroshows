@@ -65,7 +65,6 @@
       <button type="submit" class="btn btn-primary" style="background-color:black; border:1px solid white">Comprar</button>
     </div>
       
-
     </form>
 
 <!-- endforeach -->
