@@ -2,33 +2,56 @@
 
 @section('content')
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <div class="jumbotron jumbotron-fluid" style="height:94.2vh">
-            <div class="container">
-                <h1 class="display-4">Fluid jumbotron</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            </div>
-        </div>
-    </div>
+<div class="img-backgroundingressos" 
+    style="display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10%;"
+    >
+<!-- Conferir se a class foi aplicada adicionando background image -->
+    <form style="background-color: black; opacity:0.8; padding:30px; border-radius:30px">
 
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
- <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </button>
-</div>
+      <!-- Nome do local -->
+      <div class="form-group">
+        <label for="local" style="color:White">Local</label>
+        <input type="local" class="form-control" id="local" aria-describedby="emailHelp"
+          value="{{ session('local') }}" readonly>
+      </div>
+      <!-- Fim local -->
+      <!-- Endereço -->
+      <div class="form-group">
+        <label for="local" style="color:White">Endereço</label>
+        <input type="endereco" class="form-control" id="endereco" aria-describedby="emailHelp"
+          value="{{ session('endereco') }}" readonly>
+      </div>
+      <!-- Fim Endereço -->
+      <!-- numero-->
+      <div class="input-group mb-3">       
+        <div class="input-group-prepend">
+          <span class="input-group-text">N.</span>
+        </div>
+        <input type="text" class="form-control" readonly/>
+      </div>
+      <!-- fim numero-->
+      <!-- CEP -->
+      <div class="input-group mb-3">       
+        <div class="input-group-prepend">
+          <span class="input-group-text">CEP:</span>
+        </div>
+        <input type="text" class="form-control" placeholder="00000-000" readonly/>
+      </div>
+
+      <!-- Fim CEP -->
+        
+      <div style="display: flex;
+         justify-content: center;
+         flex-direction:row;
+         align-items: center;">
+           <button type="submit" class="btn btn-primary" style="background-color:black; border:1px solid white">Enviar</button>
+      </div>
+      
+
+    </form>
 
 @endsection
