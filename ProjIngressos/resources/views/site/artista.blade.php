@@ -2,39 +2,40 @@
 
 @section('content')
 
-<div style="padding-top:2rem; height:50%; background-color:black">
-  <section id="slider" class="card-fit">
-    <input type="radio" name="slider" id="s1" checked>
-    <input type="radio" name="slider" id="s2">
-    <input type="radio" name="slider" id="s3">
-    
-
-    <label for="s1" id="slide1">
-      <img class="h-100" src="{{ asset('images/artistas/scott-min.jpg') }}" alt="First slide">
-      <div class="text-img text-light">
-        <h4>Travis Scott</h4>
-        <p>Cantor de Rap</p>
+<div class="card-group" style="background-color: black; opacity:0.9; padding:30px; border-radius:30px" >
+    <div class="card">
+      <img src="{{ asset('images/artistas/scott-min.jpg') }}" class="card-img-top" style="opacity:1.0 !important">
+      <div class="card-body">
+        <h5 class="card-title">Travis Scott</h5>
+        <p class="card-text">Jacques Berman Webster II, mais conhecido por seu nome artístico Travis Scott, 
+          é um rapper, cantor, compositor e produtor musical norte-americano.</p>
       </div>
-    </label>
-
-
-    <label for="s2" id="slide2">
-    <img class="h-100" src="{{ asset('images/artistas/lamar.jpg') }}" alt="Second slide">
-      <div class="text-img text-light">
-        <h4>Kendrick Lamar</h4>
-        <p>Cantor de Rap</p>
+      <div class="card-footer">
+        <small class="text-muted">Ingressos disponíveis</small>
       </div>
-    </label>
-
-    
-    <label for="s3" id="slide3">
-    <img class="h-100" src="{{ asset('images/artistas/skrillex.jpg') }}" alt="Third slide">
-      <div class="text-img text-light">
-        <h4>Skrillex</h4>
-        <p>DJ</p>
+    </div>
+    <div class="card">
+      <img src="{{ asset('images/artistas/skrillex.jpg') }}" class="card-img-top" style="opacity:1.0 !important">
+      <div class="card-body">
+        <h5 class="card-title">Skrillex</h5>
+        <p class="card-text">Sonny John Moore, mais conhecido como Skrillex, é um premiado produtor musical, 
+          cantor e compositor norte americano de música eletrônica. </p>
       </div>
-    </label>
-  </section>
-</div>
+      <div class="card-footer">
+        <small class="text-muted">Ingressos disponíveis</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ asset('images/artistas/lamar.jpg') }}" class="card-img-top" style="opacity:1.0 !important; ">
+      <div class="card-body" >
+        <h5 class="card-title">Kendrick Lamar</h5>
+        <p class="card-text">Kendrick Lamar Duckworth, mais conhecido como Kendrick Lamar, 
+          é um rapper, produtor musical e compositor, considerado como um dos artistas mais influentes de sua geração</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Ingressos disponíveis</small>
+      </div>
+    </div>
+  </div>
 
 @endsection  
