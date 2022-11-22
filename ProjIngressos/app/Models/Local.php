@@ -10,8 +10,11 @@ class Local extends Model
     use HasFactory;
 
     protected $fillable = [
+        'nLocal',
         'endereco',
+        'numero',
         'cidade',
         'estado',
+        'cep',
     ];
 }
