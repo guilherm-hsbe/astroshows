@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="card-group" style="background-color: black; opacity:0.9; padding:30px; border-radius:30px" >
+<div class="card-group" >
     <div class="card">
       <img src="{{ asset('images/artistas/scott-min.jpg') }}" class="card-img-top" style="opacity:1.0 !important">
       <div class="card-body">
