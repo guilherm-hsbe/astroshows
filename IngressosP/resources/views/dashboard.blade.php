@@ -2,20 +2,22 @@
 @extends('site.layout')
 @section('content')
 
-    <li class="nav-item active {{ (Route::current()->getName() === 'home' ? ' active' : '') }}">
-        <a class="nav-link" href="{{ route('site.home') }}">Home</a>
-    </li>
+    <div class="d-flex justify-content-center align-items-center mt-3 list-group">
+        <div class="mb-3">
+            <a class="nav-link btn btn-dark" href="{{ route('site.home') }}">Home</a>
+        </div>
 
-    <li class="nav-item active {{ (Route::current()->getName() === 'artistasmanager' ? ' active' : '') }}">
-        <a class="nav-link" href="{{ route('artistasmanager.index') }}">Artistas Manager</a>
-    </li>
+        <div class="mb-2">
+            <a class="nav-link btn btn-outline-dark" href="{{ route('contatosmanager.index') }}">Contatos Manager</a>
+        </div>
 
-    <li class="nav-item active {{ (Route::current()->getName() === 'contatosmanager' ? ' active' : '') }}">
-        <a class="nav-link" href="{{ route('contatosmanager.index') }}">Contatos Manager</a>
-    </li>
-
-    <li class="nav-item active {{ (Route::current()->getName() === 'showsmanager' ? ' active' : '') }}">
-        <a class="nav-link" href="{{ route('showsmanager.index') }}">Shows Manager</a>
-    </li>
+        <div class="mb-2">
+            <a class="nav-link btn btn-outline-dark" href="{{ route('artistasmanager.index') }}">Artistas Manager</a>
+        </div>       
+        
+        <div class="mb-2">
+            <a class="nav-link btn btn-outline-dark" href="{{ route('showsmanager.index') }}">Shows Manager</a>
+        </div>
+    </div>
 </x-app-layout>
 @endsection

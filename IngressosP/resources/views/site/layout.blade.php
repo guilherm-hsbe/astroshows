@@ -59,6 +59,10 @@
           </li>
         </ul>
       </div>
+      
+      <div>
+        <a class="btn btn-sm btn-outline-light" href="{{ route('dashboard') }}">Perfil</a>
+      </div>
     </nav>
 
     <!-- Main -->

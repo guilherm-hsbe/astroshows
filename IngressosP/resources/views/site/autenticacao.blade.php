@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Entre | Cadastre-se</title>
 
     <link
       rel="stylesheet"
@@ -13,29 +13,29 @@
       crossorigin="anonymous"
     />
 
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/146/146074.png">
 </head>
-<body>
-    <div class="row">
-    <div class="col"></div>
-    <div class="col">
+<body style="height:100vh" class="d-flex justify-content-center align-items-center">
+    <div class="card text-center" style="border-radius:20px;border:none">   
+      <div class="card-body">
+        <img src="https://cdn-icons-png.flaticon.com/512/146/146074.png" class="img-fluid mb-4" alt="..." style="width:128px;height:128px">
 
+        <h3 class="card-title font-weight-bold">Bem Vindo!</h3>
+        <p class="card-text mb-2">
+          <a href="{{ url('/register') }}" class="text-decoration-none font-weight-bold text-secondary">Cadastre-se</a> 
+          ou 
+          <a href="{{ url('/login') }}" class="text-decoration-none font-weight-bold text-secondary">Entre</a> 
+          em sua conta...
+        </p>
 
+        <!-- <div class="mb-2">
+          <a href="{{ url('/dashboard') }}" class="btn btn-outline-primary">Dashboard</a>
+        </div> -->
+      </div>
+  </div>
 
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-      
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-          
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-          
-        </div>
-
-
-    </div>
-    <div class="col"></div>
-</div>
-<script
+  <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"></script>
