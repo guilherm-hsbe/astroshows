@@ -1,5 +1,3 @@
-
-
 <x-app-layout>
     
 @extends('site.layout')

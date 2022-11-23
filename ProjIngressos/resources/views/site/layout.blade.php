@@ -57,14 +57,12 @@
           <li class="nav-item {{ (Route::current()->getName() === 'site.contatos' ? ' active' : '') }}">
             <a class="nav-link" href="{{ route('site.contatos') }}">Contato</a>
           </li>
+          <li class="">
+            <a class="nav-link" href="{{ url('/dashboard') }}">Menu</a>
+          </li>
         </ul>
 
-        <div>
-           
-        <a class="nav-link btn btn-sm btn-outline-light" href="{{ route('site.adm') }}">Administrativo</a>
-          <button class="btn btn-sm btn-outline-light" type="submit">Perfil</button>
-
-        </div>
+        
       </div>
     </nav>
 

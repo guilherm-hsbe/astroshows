@@ -15,12 +15,9 @@
 
 </head>
 <body>
-    <div class="row">
-    <div class="col"></div>
-    <div class="col">
-
-
-
+    <div class="row" style="display: flex; justify-content: center; flex-direction: row; align-items: center;">
+      <div class="col"></div>
+      <div class="col" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
       
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
@@ -30,10 +27,11 @@
             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
           
         </div>
-
-
+        
+      </div>
+      <div class="col"></div>
     </div>
-    <div class="col"></div>
+    
 </div>
 <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
