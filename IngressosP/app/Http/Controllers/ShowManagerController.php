@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Show;
+use App\Models\Artista;
 
 class ShowManagerController extends Controller
 {
@@ -19,6 +20,7 @@ class ShowManagerController extends Controller
     // * CREATE ---------------------------------|
     public function create()
     {
+        $artistas = Artista::all();
         return view('showsmanager.create');
     }
 

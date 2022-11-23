@@ -48,7 +48,7 @@
             
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Horário de Encerramento:</strong>
+                    <strong>Horário de Término:</strong>
                     <input class="form-control" type="input" name="horario_f">
                 </div>
             </div>
@@ -57,7 +57,9 @@
                 <div class="form-group">
                     <strong>Artista:</strong>
                     <select class="form-control" type="input" name="artista_id">
-                        <option value=""></option>
+                        @foreach ($artistas as $artista)
+                            <option value="">awd</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -66,7 +68,9 @@
                 <div class="form-group">
                     <strong>Local:</strong>
                     <select class="form-control" type="input" name="local_id">
-                        <option value=""></option>
+                        @foreach ($locais as $local)
+                            <option value=""></option>
+                        @endforeach
                     </select>
                 </div>
             </div>

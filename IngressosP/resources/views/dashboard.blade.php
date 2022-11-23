@@ -14,5 +14,8 @@
         <a class="nav-link" href="{{ route('contatosmanager.index') }}">Contatos Manager</a>
     </li>
 
+    <li class="nav-item active {{ (Route::current()->getName() === 'showsmanager' ? ' active' : '') }}">
+        <a class="nav-link" href="{{ route('showsmanager.index') }}">Shows Manager</a>
+    </li>
 </x-app-layout>
 @endsection
