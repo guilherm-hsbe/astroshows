@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('locais', function (Blueprint $table) {
             $table->id();
-            $table->string("nLocal", 200);
+            $table->string("nLocal", 90);
             $table->string("endereco", 200);
-            $table->string("numero", 5);
+            $table->integer("numero", 5);
             $table->string("cidade", 50);
             $table->string("estado", 40);
-            $table->string("cep", 9);
+            $table->integer("cep", 9);
             $table->timestamps();
         });
     }

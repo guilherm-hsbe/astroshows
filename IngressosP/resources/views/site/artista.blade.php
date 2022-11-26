@@ -5,8 +5,14 @@
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner" style="height:94.2vh">
 
+    <?php $i = 0; ?>
     @foreach ($artistas as $artista)
-    <div class="carousel-item active" data-interval="10000">
+    @if ($i == 0)
+      <div class="carousel-item active" data-interval="10000">
+      <?php $i++; ?>
+      @else
+        <div class="carousel-item" data-interval="10000">
+      @endif
       <img class="d-block w-100" src="{{ asset($artista->imagem) }}" alt="">
 
       <div class="carousel-caption d-none d-md-block ">

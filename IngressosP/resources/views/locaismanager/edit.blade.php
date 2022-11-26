@@ -2,13 +2,12 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1 class="display-4">Cadastrar Novo Local</h1>
+    <h1 class="display-4">Editar Cadastro de Local</h1>
     <hr class="my-4">
 </div>
 <div class="container">
     <a class="btn btn-primary" href="{{ route('locaismanager.index') }}"> Voltar</a>
     <p></p>
-
     @if ($errors->any())
         <p></p>
         <div class="alert alert-danger">
@@ -21,16 +20,15 @@
         </div>
     @endif
 
-    <form action="{{ route('locaismanager.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('locaismanager.update', $artista) }}" method="POST">
         @csrf
+        @method('PUT')
 
-        <div class="row">
-
-            <!-- * Nome do Local -->
-            <div class="col-xs-12 col-sm-12 col-md-12">
+         <!-- * Nome do Local -->
+         <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome do Local:</strong>
-                    <input type="input" name="nLocal" class="form-control" placeholder="Arena Só Shows" maxlength="90">
+                    <input type="input" name="nLocal" class="form-control" placeholder="Arena Só Shows" value="{{ $local->nLocal }}" maxlength="90">
                 </div>
             </div>
 
@@ -38,7 +36,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Endereço:</strong>
-                    <input type="input" name="endereco" class="form-control" placeholder="Rua Imaginação, Jardim Sonhos" maxlength="200">
+                    <input type="input" name="endereco" class="form-control" placeholder="Rua Imaginação, Jardim Sonhos" value="{{ $local->endereco }}" maxlength="200">
                 </div>
             </div>
             
@@ -46,7 +44,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Número<strong>
-                    <input type="number" name="numero" class="form-control" placeholder="1090" maxlength="5">
+                    <input type="number" name="numero" class="form-control" placeholder="1090" value="{{ $local->numero }}" maxlength="5">
                 </div>
             </div>
 
@@ -54,7 +52,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Cidade:</strong>
-                    <input type="input" name="cidade" class="form-control" placeholder="Presidente Prudente" maxlength="50">
+                    <input type="input" name="cidade" class="form-control" placeholder="Presidente Prudente" value="{{ $local->cidade }}" maxlength="50">
                 </div>
             </div>
             
@@ -62,7 +60,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Estado:</strong>
-                    <input type="input" name="estado" class="form-control" placeholder="São Paulo" maxlength="40">
+                    <input type="input" name="estado" class="form-control" placeholder="São Paulo" value="{{ $local->estado }}" maxlength="40">
                 </div>
             </div>
 
@@ -70,13 +68,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>CEP:</strong>
-                    <input type="number" name="cep" class="form-control" placeholder="19084736" maxlength="9">
+                    <input type="number" name="cep" class="form-control" placeholder="19084736" value="{{ $local->cep }}" maxlength="9">
                 </div>
             </div>
-            
-            <!-- ! Cadastrar -->
+
+            <!-- ! Atualizar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-success">Cadastrar</button>
+              <button type="submit" class="btn btn-primary">Atualizar</button>
             </div>
         </div>
 

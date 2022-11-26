@@ -13,7 +13,11 @@
 
         <div class="mb-2">
             <a class="nav-link btn btn-outline-dark" href="{{ route('artistasmanager.index') }}">Artistas Manager</a>
-        </div>       
+        </div> 
+        
+        <div class="mb-2">
+            <a class="nav-link btn btn-outline-dark" href="{{ route('locaismanager.index') }}">Locais Manager</a>
+        </div>  
         
         <div class="mb-2">
             <a class="nav-link btn btn-outline-dark" href="{{ route('showsmanager.index') }}">Shows Manager</a>
