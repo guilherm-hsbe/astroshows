@@ -29,51 +29,6 @@ transition: opacity 0s 2.6s;
     transition: 1s;
 }
 
-/* CUSTOMIZADO */
-
-.img-back {
-  height: 100vh;
-  background-image: url("https://static.itapemafm.com.br/s3fs-public/graphql-upload-files/11%20Those%20Girls%20%5BApple%20ProRes%20422%20HQ%5D%20%28Live%20in%20Studio%29.00_00_54_22.Still003_5.jpg?z92Ayst7OLVKSTpe3hIxDatchDqHlhcd");
-}
-
-.img-backgroundingressos {
-  height: 100vh;
-  background-image: url("https://wallpaper.dog/large/10797041.jpg");
-}
-
-.transp-input input,textarea {
-  background-color: #171717ee !important;
-  color: rgb(240, 240, 240) !important;
-  border: 0 !important;
-}
-
-.transp-input ::placeholder {
-  color:#ffffff8b
-}
-
-.card-fit label {
-  background:#00000000 !important
-}
-
-.card-fit img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px
-}
-
-.card-fit input,label {
-  height: 100%;
-}
-
-.text-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* --------------------------------- */
-
   [type=radio] {
     display: none;
   }

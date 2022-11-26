@@ -16,6 +16,7 @@
 
     <!-- Css -->
     @vite(['public/css/style.css'])
+    @vite(['public/css/custom.css'])
 
     <!-- Favicon -->
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/146/146074.png">

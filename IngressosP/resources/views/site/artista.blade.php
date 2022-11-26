@@ -2,21 +2,31 @@
 
 @section('content')
 
-<div class="card-group" style="background-color: black; opacity:0.9; padding:30px; border-radius:30px">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner" style="height:94.2vh">
 
-  @foreach ($artistas as $artista)
-    <div class="card">
-      <img src="{{ asset($artista->imagem) }}" class="card-img-top" style="opacity:1.0 !important">
-      <div class="card-body">
-        <h5 class="card-title">{{ $artista->nome_artistico }}</h5>
-        <p class="card-text">{{ $artista->descricao }}</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Ingressos disponíveis</small>
+    @foreach ($artistas as $artista)
+    <div class="carousel-item active" data-interval="10000">
+      <img class="d-block w-100" src="{{ asset($artista->imagem) }}" alt="">
+
+      <div class="carousel-caption d-none d-md-block ">
+          <h3>{{ $artista->nome_artistico }}</h3>
+          <p>{{ $artista->descricao }}</p>
       </div>
     </div>
-  @endforeach
+    @endforeach
 
+  </div>
+
+  <!-- Buttons -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
 </div>
 
 @endsection  
