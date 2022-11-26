@@ -14,6 +14,7 @@ use App\Http\Controllers\IngressoController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\ContatoManagerController;
 use App\Http\Controllers\ShowManagerController;
+use App\Http\Controllers\LocalManagerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,10 @@ Route::get('/home',[HomeController::class,'home'])->name('site.home');
 Route::get('/artista',[ArtistaController::class,'artista'])->name('site.artista');
 Route::resource('artistasmanager',ArtistaManagerController::class); //CRUD artistas
 
+// Locais
 Route::get('/local',[LocalController::class,'local'])->name('site.local');
+Route::resource('locaismanager',LocalManagerController::class); //CRUD locais
+
 Route::get('/ingresso',[IngressoController::class,'ingresso'])->name('site.ingresso');
 
 // Contatos
@@ -44,7 +48,7 @@ Route::resource('contatosmanager',ContatoManagerController::class); //CRUD conta
 
 // Shows
 Route::get('/show',[ShowController::class,'show'])->name('site.show');
-Route::resource('showsmanager',ShowManagerController::class); //CRUD contatos
+Route::resource('showsmanager',ShowManagerController::class); //CRUD shows
 
 // Dashboard
 Route::get('/dashboard', function () {
