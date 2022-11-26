@@ -24,7 +24,7 @@
         @csrf
         @method('PUT')
 
-         <!-- * Nome do Local -->
+         <!-- //* Nome do Local -->
          <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome do Local:</strong>
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <!-- * Endereço -->
+            <!-- //* Endereço -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Endereço:</strong>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             
-            <!-- * Número -->
+            <!-- //* Número -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Número<strong>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <!-- * Cidade -->
+            <!-- //* Cidade -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Cidade:</strong>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             
-            <!-- * Estado -->
+            <!-- //* Estado -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Estado:</strong>
@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <!-- * CEP -->
+            <!-- //* CEP -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>CEP:</strong>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- ! Atualizar -->
+            <!-- //? Atualizar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Atualizar</button>
             </div>

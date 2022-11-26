@@ -25,6 +25,8 @@
         @csrf
 
         <div class="row">
+
+            <!-- //* Qtde Ingressos -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Quantidade de Ingressos (Capacidade):</strong>
@@ -32,6 +34,7 @@
                 </div>
             </div>
 
+            <!-- //* Data -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Data:</strong>
@@ -39,6 +42,7 @@
                 </div>
             </div>
 
+            <!-- //* HorárioI -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Horário de Ínicio:</strong>
@@ -46,6 +50,7 @@
                 </div>
             </div>
             
+            <!-- //* HorárioF -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Horário de Término:</strong>
@@ -53,6 +58,7 @@
                 </div>
             </div>
 
+            <!-- //* Artista -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Artista:</strong>
@@ -64,6 +70,7 @@
                 </div>
             </div>
 
+            <!-- //* Local -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Local:</strong>
@@ -75,7 +82,7 @@
                 </div>
             </div>
 
-
+            <!-- //? Cadastrar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-success">Cadastrar</button>
             </div>

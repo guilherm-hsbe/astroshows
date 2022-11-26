@@ -38,3 +38,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .dark-div {
+    border-radius: 30px;
+    padding: 0.1rem;
+  }
+  .dark-div:hover {
+    transition: 0.2s;
+    background-color: #0f0f0f94;
+  }
+  .dark-div p {
+    font-size: 1.2rem;
+  }

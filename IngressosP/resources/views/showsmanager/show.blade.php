@@ -9,6 +9,8 @@
     <a class="btn btn-primary" href="{{ route('showsmanager.index') }}"> Voltar</a>
     <p></p>
     <div class="row">
+
+        <!-- //* QtdeIngressos -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Quantidade de Ingressos:</strong>
@@ -16,6 +18,7 @@
             </div>
         </div>
 
+        <!-- //* Data -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Data:</strong>
@@ -23,6 +26,7 @@
             </div>
         </div>
 
+        <!-- //* HorárioI -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Horário de Início:</strong>
@@ -30,6 +34,7 @@
             </div>
         </div>
 
+        <!-- //* HorárioF -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Horário de Término:</strong>
@@ -37,6 +42,7 @@
             </div>
         </div>
 
+        <!-- //* Artista -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Artista:</strong>
@@ -44,6 +50,7 @@
             </div>
         </div>
 
+        <!-- //* Local -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Local:</strong>

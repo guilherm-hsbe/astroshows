@@ -28,10 +28,6 @@
           <a href="{{ url('/login') }}" class="text-decoration-none font-weight-bold text-secondary">Entre</a> 
           em sua conta...
         </p>
-
-        <!-- <div class="mb-2">
-          <a href="{{ url('/dashboard') }}" class="btn btn-outline-primary">Dashboard</a>
-        </div> -->
       </div>
   </div>
 
