@@ -58,7 +58,7 @@
                     <strong>Artista:</strong>
                     <select class="form-control" type="input" name="artista_id">
                         @foreach ($artistas as $artista)
-                            <option value="">awd</option>
+                            <option value="">{{ $artista->nome_artistico }}</option>
                         @endforeach
                     </select>
                 </div>
