@@ -32,11 +32,13 @@
 
 |-------------------------------------------------------------|
 
-	Criar Controller/Model/View
+	Criar Controller/Model/View/Seeder
 -Entrar pasta projeto
 > php artisan make:controller NomeController
 > php artisan make:model NomeModel
 > php artisan make:model -m NomeModel (também cria a migration)
+> php artisan make:seeder NomeSeeder
+    > php artisan seeder NomeSeeder
 -Gerar view com extensão ".blade.php"
 
 |-------------------------------------------------------------|
