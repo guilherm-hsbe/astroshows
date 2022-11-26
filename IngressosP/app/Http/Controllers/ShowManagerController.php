@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Show;
 use App\Models\Artista;
+use App\Models\Local;
 
 class ShowManagerController extends Controller
 {
@@ -21,7 +22,8 @@ class ShowManagerController extends Controller
     public function create()
     {
         $artistas = Artista::all();
-        return view('showsmanager.create');
+        $locais = Local::all();
+        return view('showsmanager.create', compact('artistas', 'locais'));
     }
 
     // * STORE ---------------------------------|
