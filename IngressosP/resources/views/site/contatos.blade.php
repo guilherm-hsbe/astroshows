@@ -19,23 +19,32 @@
       @endif
       <form method="post" class="transp-input">
           @csrf
+
+          <!-- * Nome -->
           <div class="form-group">
-              <label for="nomeContato">Nome</label>
-              <input type="text" class="form-control" id="nomeContato" name="nomeContato" placeholder="Guilherme">
-            </div>
-          <div class="form-group">
-            <label for="emailContato">Email</label>
-            <input type="email" class="form-control" id="emailContato" name="emailContato" placeholder="guilherme@email.com">
-          </div>
-          <div class="form-group">
-            <label for="telefoneContato">Telefone</label>
-            <input type="number" class="form-control" id="telefoneContato" name="telefoneContato" placeholder="18988058371" maxlength="12">
-          </div>
-          <div class="form-group">
-            <label for="mensagemContato">Mensagem</label>
-            <textarea class="form-control" id="mensagemContato" name="mensagemContato" rows="3" placeholder="Escreva sua mensagem..."></textarea>
+            <label for="nomeContato">Nome</label>
+            <input type="text" class="form-control" id="nomeContato" name="nomeContato" placeholder="Guilherme" maxlength="100">
           </div>
 
+          <!-- * Email -->
+          <div class="form-group">
+            <label for="emailContato">Email</label>
+            <input type="email" class="form-control" id="emailContato" name="emailContato" placeholder="guilherme@email.com" maxlength="100">
+          </div>
+
+          <!-- * Telefone -->
+          <div class="form-group">
+            <label for="telefoneContato">Telefone</label>
+            <input type="number" class="form-control" id="telefoneContato" name="telefoneContato" placeholder="18988058371" maxlength="12" maxlength="12">
+          </div>
+
+          <!-- * Mensagem -->
+          <div class="form-group">
+            <label for="mensagemContato">Mensagem</label>
+            <textarea class="form-control" id="mensagemContato" name="mensagemContato" rows="3" placeholder="Escreva sua mensagem..." maxlength="500"></textarea>
+          </div>
+
+          <!-- ! Enviar -->
           <button type="submit" class="btn btn-outline-light mb-2" value="Enviar">Enviar</button>
       </form>
   </div>

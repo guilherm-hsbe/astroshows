@@ -9,18 +9,24 @@
     <a class="btn btn-primary" href="{{ route('artistasmanager.index') }}"> Voltar</a>
     <p></p>
     <div class="row">
+
+        <!-- //* Nome Artístico -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nome:</strong>
                 {{ $artista->nome_artistico }}
             </div>
         </div>
+
+        <!-- //* Descrição -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Descrição:</strong>
                 {{ $artista->descricao }}
             </div>
         </div>
+
+        <!-- //* Imagem -->
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Imagem:</strong>

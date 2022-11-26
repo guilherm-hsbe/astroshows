@@ -12,19 +12,24 @@
 
     <div class="list-group">
         <a class="list-group-item list-group-item-action list-group-item-secondary" aria-current="true">ID: 
-            <strong>{{ $contato->id }}</strong></a>
+            <strong>{{ $contato->id }}</strong>
+        </a>
 
         <a class="list-group-item list-group-item-action">Nome: 
-            <strong>{{ $contato->nome }}</strong></a>
+            <strong>{{ $contato->nome }}</strong>
+        </a>
 
-        <a class="list-group-item list-group-item-action">Email: 
-            <strong>{{ $contato->email }}</strong></a>
+        <a class="list-group-item list-group-item-action">Email:
+            <strong>{{ $contato->email }}</strong>
+        </a>
 
         <a class="list-group-item list-group-item-action">Telefone: 
-            <strong>{{ $contato->telefone }}</strong></a>
+            <strong>{{ $contato->telefone }}</strong>
+        </a>
             
         <a class="list-group-item list-group-item-action">Mensagem: 
-            <strong>{{ $contato->mensagem }}</strong></a>
+            <strong>{{ $contato->mensagem }}</strong>
+        </a>
     </div>
 </div>
 

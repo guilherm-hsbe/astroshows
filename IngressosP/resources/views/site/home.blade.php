@@ -14,7 +14,7 @@
     <div class="carousel-item active" data-interval="10000">
       <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/scott-min.jpg') }}" alt="First slide">
 
-      <div class="carousel-caption d-none d-md-block ">
+      <div class="carousel-caption d-none d-md-block dark-div">
           <h3>Travis Scott</h3>
           <p>Travis Scott é um rapper, cantor, compositor e produtor musical norte-americano.</p>
           <button type="button" class="btn btn-outline-light">Ver Ingressos</button>

@@ -10,13 +10,13 @@
     @if ($i == 0)
       <div class="carousel-item active" data-interval="10000">
       <?php $i++; ?>
-      @else
-        <div class="carousel-item" data-interval="10000">
-      @endif
+    @else
+      <div class="carousel-item" data-interval="10000">
+    @endif
       <img class="d-block w-100" src="{{ asset($artista->imagem) }}" alt="">
 
-      <div class="carousel-caption d-none d-md-block ">
-          <h3>{{ $artista->nome_artistico }}</h3>
+      <div class="carousel-caption d-none d-md-block mb-2 dark-div">
+          <h2>{{ $artista->nome_artistico }}</h2>
           <p>{{ $artista->descricao }}</p>
       </div>
     </div>

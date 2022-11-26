@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Controllers
+//! Controllers
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AutentController;
 use App\Http\Controllers\ArtistaController;
@@ -27,35 +27,36 @@ use App\Http\Controllers\LocalManagerController;
 |
 */
 
-// Gerais
+//* Gerais
 Route::get('/',[AutentController::class,'home'])->name('site.autent');
 Route::get('/home',[HomeController::class,'home'])->name('site.home');
 
-// Artistas
+//* Artistas
 Route::get('/artista',[ArtistaController::class,'artista'])->name('site.artista');
 Route::resource('artistasmanager',ArtistaManagerController::class); //CRUD artistas
 
-// Locais
+//* Locais
 Route::get('/local',[LocalController::class,'local'])->name('site.local');
 Route::resource('locaismanager',LocalManagerController::class); //CRUD locais
 
+//* Ingressos
 Route::get('/ingresso',[IngressoController::class,'ingresso'])->name('site.ingresso');
 
-// Contatos
+//* Contatos
 Route::get('/contatos',[ContatoController::class,'index'])->name('site.contatos');
 Route::post('/contatos',[ContatoController::class,'store'])->name('site.contatos');
 Route::resource('contatosmanager',ContatoManagerController::class); //CRUD contatos
 
-// Shows
+//* Shows
 Route::get('/show',[ShowController::class,'show'])->name('site.show');
 Route::resource('showsmanager',ShowManagerController::class); //CRUD shows
 
-// Dashboard
+//? Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Auth
+//? Auth
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

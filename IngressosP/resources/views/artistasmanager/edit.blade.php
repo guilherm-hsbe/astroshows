@@ -25,24 +25,32 @@
         @method('PUT')
 
          <div class="row">
+
+            <!-- //* Nome Artístico -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome Artístico:</strong>
-                    <input type="input" name="nome_artistico" value="{{ $artista->nome_artistico }}" class="form-control" placeholder="Nome">
+                    <input type="input" name="nome_artistico" value="{{ $artista->nome_artistico }}" class="form-control" placeholder="Nome" maxlength="50">
                 </div>
             </div>
+
+            <!-- //* Descrição -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descrição:</strong>
                     <textarea class="form-control" style="height:150px" name="descricao" placeholder="Descrição" maxlength="500">{{ $artista->descricao }}</textarea>
                 </div>
             </div>
+
+            <!-- //* Imagem -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagem:</strong>
                     <input type="text" name="imagem" value="{{ $artista->imagem }}" class="form-control" placeholder="Imagem">
                 </div>
             </div>
+
+            <!-- //? Atualizar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Atualizar</button>
             </div>
