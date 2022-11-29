@@ -7,16 +7,26 @@
 
   <div class="col-6">
 
-  @foreach ($locais as $local)
-    <div class="jumbotron shadow-lg bg-dark text-light p-5 mt-5">
-      <h1 class="display-4">{{ asset($local->nLocal) }}</h1>
-      <p class="lead">{{ asset($local->endereco) }}, {{ asset($local->bairro) }}, {{ asset($local->numero) }}.</p>
-      <hr class="my-4">
-      <p>{{ asset($local->cidade) }}, {{ asset($local->estado) }}, {{ asset($local->cep) }}.</p>
-      
-      <a class="btn btn-primary btn-lg" href="#" role="button">Botão</a>
-    </div>
-  @endforeach
+    @foreach ($locais as $local)
+      <div class="featurette mb-5 shadow-lg div-local p-5 mt-5">
+        <div class="">
+            <h1 class="featurette-heading">{{ asset($local->nLocal) }}</h1>
+            <h4>{{ asset($local->endereco) }}, {{ asset($local->bairro) }}, {{ asset($local->numero) }}</h4>
+
+            <hr class="my-4 bg-light">
+
+            <p class="lead">{{ asset($local->cidade) }}</p>
+            <p class="lead">{{ asset($local->estado) }}</p>
+            <p class="lead">{{ asset($local->cep) }}</p>
+        </div>
+        <div class="col-md-5">
+            <figure class="figure">
+                <img src="" class="figure-img img-fluid" style="border-radius: 16px;">
+            </figure>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+    @endforeach
 
   </div>
 

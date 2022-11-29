@@ -64,7 +64,7 @@
                     <strong>Artista:</strong>
                     <select class="form-control" type="input" name="artista_id">
                         @foreach ($artistas as $artista)
-                            <option value="">{{ $artista->nome_artistico }}</option>
+                            <option value="{{ $artista->id }}">{{ $artista->nome_artistico }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -76,7 +76,7 @@
                     <strong>Local:</strong>
                     <select class="form-control" type="input" name="local_id">
                         @foreach ($locais as $local)
-                            <option value=""></option>
+                            <option value="{{ $local->id }}">{{ $local->nLocal }}</option>
                         @endforeach
                     </select>
                 </div>
