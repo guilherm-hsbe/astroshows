@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string("nLocal", 90);
             $table->string("endereco", 200);
-            $table->integer("numero", 5);
+            $table->string("bairro", 150);
+            $table->integer("numero");
             $table->string("cidade", 50);
             $table->string("estado", 40);
-            $table->integer("cep", 9);
+            $table->integer("cep");
             $table->timestamps();
         });
     }

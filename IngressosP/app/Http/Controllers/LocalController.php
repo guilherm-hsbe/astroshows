@@ -7,7 +7,7 @@ use App\Models\Local;
 
 class LocalController extends Controller
 {
-    public function index(){
+    public function local(){
         $locais = Local::all();
         return view ('site.local',compact('locais'));
     }

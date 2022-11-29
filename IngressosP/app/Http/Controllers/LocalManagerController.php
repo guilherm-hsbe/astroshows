@@ -28,6 +28,7 @@ class LocalManagerController extends Controller
         $request->validate([
             'nLocal' => 'required',
             'endereco' => 'required',
+            'bairro' => 'required',
             'numero' => 'required',
             'cidade' => 'required',
             'estado' => 'required',
@@ -38,6 +39,7 @@ class LocalManagerController extends Controller
         $local = new Local;
         $local->nLocal = $request->nLocal;
         $local->endereco = $request->endereco;
+        $local->bairro = $request->bairro;
         $local->numero = $request->numero;
         $local->cidade = $request->cidade;
         $local->estado = $request->estado;
@@ -70,6 +72,7 @@ class LocalManagerController extends Controller
         $request->validate([
             'nLocal' => 'required',
             'endereco' => 'required',
+            'bairro' => 'required',
             'numero' => 'required',
             'cidade' => 'required',
             'estado' => 'required',

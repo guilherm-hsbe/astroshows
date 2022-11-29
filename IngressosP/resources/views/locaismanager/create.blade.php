@@ -38,7 +38,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Endereço:</strong>
-                    <input type="input" name="endereco" class="form-control" placeholder="Rua Imaginação, Jardim Sonhos" maxlength="200">
+                    <input type="input" name="endereco" class="form-control" placeholder="Rua Imaginação" maxlength="200">
+                </div>
+            </div>
+
+            <!-- //* Bairro -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Bairro:</strong>
+                    <input type="input" name="bairro" class="form-control" placeholder="Jardim Sonhos" maxlength="150">
                 </div>
             </div>
             

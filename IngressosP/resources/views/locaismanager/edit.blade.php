@@ -36,7 +36,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Endereço:</strong>
-                    <input type="input" name="endereco" class="form-control" placeholder="Rua Imaginação, Jardim Sonhos" value="{{ $local->endereco }}" maxlength="200">
+                    <input type="input" name="endereco" class="form-control" placeholder="Rua Imaginação" value="{{ $local->endereco }}" maxlength="200">
+                </div>
+            </div>
+
+            <!-- //* Bairro -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Bairro:</strong>
+                    <input type="input" name="endereco" class="form-control" placeholder="Jardim Sonhos" value="{{ $local->bairro }}" maxlength="150">
                 </div>
             </div>
             

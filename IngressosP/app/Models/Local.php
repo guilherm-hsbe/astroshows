@@ -13,6 +13,7 @@ class Local extends Model
     protected $fillable = [
         'nLocal',
         'endereco',
+        'bairro',
         'numero',
         'cidade',
         'estado',

@@ -25,6 +25,14 @@
                 {{ $local->endereco }}
             </div>
         </div>
+
+        <!-- //* Bairro -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Bairro:</strong>
+                {{ $local->bairro }}
+            </div>
+        </div>
         
         <!-- //* Número -->
         <div class="col-xs-12 col-sm-12 col-md-12">

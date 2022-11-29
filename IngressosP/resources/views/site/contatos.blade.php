@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="img-back">
+<div class="img-back" style="height: 94.2vh;">
   <div class="jumbotron bg-transparent text-light" style="border-radius:0">
       <h1 class="display-4">Fale Conosco</h1>
       <hr class="my-4">
