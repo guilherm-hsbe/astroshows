@@ -15,7 +15,7 @@
     @endif
       <img class="d-block w-100" src="{{ asset($artista->imagem) }}" alt="">
 
-      <div class="carousel-caption d-none d-md-block mb-2 dark-div">
+      <div class="carousel-caption d-none d-md-block mb-2 dark-div p-2">
           <h2>{{ $artista->nome_artistico }}</h2>
           <p>{{ $artista->descricao }}</p>
       </div>

@@ -12,7 +12,7 @@
     background-image: url('https://images.wallpaperscraft.com/image/single/concert_crowd_people_134866_1920x1080.jpg');
   }
   
-  .transp-input input, .transp-inputtextarea {
+  .transp-input input, .transp-input textarea {
     background-color: #171717ee !important;
     color: rgb(240, 240, 240) !important;
     border: 0 !important;

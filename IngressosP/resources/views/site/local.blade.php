@@ -10,7 +10,7 @@
     @foreach ($locais as $local)
       <div class="featurette mb-5 shadow-lg div-local p-5 mt-5">
         <div class="">
-            <h1 class="featurette-heading">{{ asset($local->nLocal) }}</h1>
+            <h1 class="featurette-heading"><i class="bi bi-building"></i> {{ asset($local->nLocal) }}</h1>
             <h4>{{ asset($local->endereco) }}, {{ asset($local->bairro) }}, {{ asset($local->numero) }}</h4>
 
             <hr class="my-4 bg-light">
@@ -18,11 +18,6 @@
             <p class="lead">{{ asset($local->cidade) }}</p>
             <p class="lead">{{ asset($local->estado) }}</p>
             <p class="lead">{{ asset($local->cep) }}</p>
-        </div>
-        <div class="col-md-5">
-            <figure class="figure">
-                <img src="" class="figure-img img-fluid" style="border-radius: 16px;">
-            </figure>
         </div>
       </div>
       <hr class="featurette-divider">

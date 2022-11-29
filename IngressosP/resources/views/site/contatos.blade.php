@@ -6,7 +6,7 @@
 
 <div class="img-back" style="height: 94.2vh;">
   <div class="jumbotron bg-transparent text-light" style="border-radius:0">
-      <h1 class="display-4">Fale Conosco</h1>
+      <h1 class="display-4">Fale Conosco <i class="bi bi-chat-square"></i></h1>
       <hr class="my-4">
       <p class="lead">Nossa equipe está sempre a disposição para 
           atendimento. Entre em contato, iremos responder o mais breve possível.</p>

@@ -19,13 +19,15 @@
     @vite(['public/css/custom.css'])
 
     <!-- Favicon -->
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/146/146074.png">
+    <link rel="icon" href="{{ Vite::asset('resources/images/outros/sound.png') }}"></link>
+    <!-- <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/146/146074.png"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   </head>
 
   <body>
     <!-- NavBar -------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-lg">
-      <a class="navbar-brand" href="#">AstroShows</a>
+      <a class="navbar-brand" href="#"><i class="bi bi-mic"></i> AstroShows</a>
 
       <button
         class="navbar-toggler"
