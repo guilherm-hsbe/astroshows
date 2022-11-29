@@ -52,6 +52,26 @@
 
 |-------------------------------------------------------------|
 
+	Npm
+-Soluções para npm
+
+# se não possuir 'react-scripts'
+> npm install react-scripts
+> npm install react-scripts@latest (versão mais recente)
+
+# atualizar/consertar/instalar npm
+> npm install
+
+# deletar node_modules/vendor/package-lock.json
+> rm -rf node_modules
+> rm -rf vendor
+> rm -f package-lock.json
+
+# limpar cache npm
+> npm cache clean --force
+
+|-------------------------------------------------------------|
+
 	GitHub (arquivo "gitignore" ignorando pastas)
 -Retomar pasta vendor
 > composer update
