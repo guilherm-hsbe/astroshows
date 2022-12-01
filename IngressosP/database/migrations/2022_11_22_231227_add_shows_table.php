@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('shows', function (Blueprint $table) {
             $table->id();
             $table->integer('qtd_ingressos');
-            $table->date('data');
-            $table->dateTime('horario_i');
-            $table->dateTime('horario_f');
+            $table->string('data');
+            $table->string('horario_i');
+            $table->string('horario_f');
             $table->foreignId('artista_id')->constrained('artistas');
             $table->foreignId('local_id')->constrained('locais');
             $table->timestamps();
