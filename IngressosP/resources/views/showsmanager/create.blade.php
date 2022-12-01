@@ -34,6 +34,14 @@
                 </div>
             </div>
 
+            <!-- Descrição -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Descrição:</strong>
+                    <input type="input" name="descricao" class="form-control">
+                </div>
+            </div>
+
             <!-- //* Data -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -61,12 +69,26 @@
             <!-- //* Artista -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Artista:</strong>
+                    <strong>Artista: </strong>
                     <select class="form-control" type="input" name="artista_id">
                         @foreach ($artistas as $artista)
-                            <option value="{{ $artista->id }}">{{ $artista->nome_artistico }}</option>
+                        <option value="{{ $artista->id }}">{{ $artista->nome_artistico }}</option>
+                        
                         @endforeach
                     </select>
+
+                    <select class="form-control" type="input" name="nome_artistico">
+                        @foreach ($artistas as $artista)
+                        <option value="{{ $artista->nome_artistico }}">{{ $artista->nome_artistico }}</option>
+                        
+                        @endforeach
+                    </select>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <strong>Imagem:</strong>
+                            <input type="file" name="imagem" class="form-control" placeholder="Imagem">
+                        </div>
+                    </div>
                 </div>
             </div>
 

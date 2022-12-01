@@ -8,7 +8,7 @@
 </div>
 
 <div class="container p-5 mt-5" style="height: 100%">
-    <a class="btn btn-outline-primary" href=""> Voltar</a>
+    <a class="btn btn-outline-primary" href="{{ route('dashboard') }}"> Voltar</a>
     <p></p>
     @if ($message = Session::get('success'))
         <p></p>

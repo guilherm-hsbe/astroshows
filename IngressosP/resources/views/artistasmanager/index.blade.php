@@ -6,6 +6,7 @@
     <hr class="my-4">
 </div>
 <div class="container">
+    <a class="btn btn-outline-primary" href="{{ route('dashboard') }}"> Voltar</a>
     <a class="btn btn-success" href="{{ route('artistasmanager.create') }}">Cadastrar Artista</a>
     <p></p>
     @if ($message = Session::get('success'))
