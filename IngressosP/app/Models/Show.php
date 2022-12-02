@@ -9,6 +9,8 @@ class Show extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'nome',
+        'descricao',
         'qtd_ingressos',
         'data',
         'horario_i',

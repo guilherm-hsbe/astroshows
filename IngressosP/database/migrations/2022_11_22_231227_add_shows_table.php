@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('shows', function (Blueprint $table) {
             $table->id();
+            $table->string('nome',100);
+            $table->string('descricao',200);
             $table->integer('qtd_ingressos');
             $table->string('data');
             $table->string('horario_i');

@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (!empty($artistas))
+  <div class="empty w-100 text-center"  style="height:94.2vh">
+    <h2><i class="bi bi-plug-fill"></i> Nada Por Aqui...</h2>
+  </div>
+  
+@else
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner" style="height:94.2vh">
 
@@ -34,5 +40,7 @@
       <span class="sr-only">Next</span>
   </a>
 </div>
+
+@endif
 
 @endsection  
