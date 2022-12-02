@@ -9,6 +9,22 @@
     <a class="btn btn-primary" href="{{ route('showsmanager.index') }}"> Voltar</a>
     <p></p>
     <div class="row">
+        
+        <!-- Nome do show -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Nome:</strong>
+                {{ $show->nome }}
+            </div>
+        </div>
+
+        <!-- Descrição -->
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Descrição:</strong>
+                {{ $show->descricao }}
+            </div>
+        </div>
 
         <!-- //* QtdeIngressos -->
         <div class="col-xs-12 col-sm-12 col-md-12">
