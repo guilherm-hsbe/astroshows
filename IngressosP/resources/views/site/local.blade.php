@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (!empty($locais))
+  <div class="empty w-100 text-center"  style="height:94.2vh">
+    <h2><i class="bi bi-plug-fill"></i> Nada Por Aqui...</h2>
+  </div>
+  
+@else
 <div class="row img-locais m-0" style="height: 94.2vh;">
   <div class="col"></div>
 
@@ -27,5 +33,7 @@
 
   <div class="col"></div>
 </div>
+
+@endif
 
 @endsection

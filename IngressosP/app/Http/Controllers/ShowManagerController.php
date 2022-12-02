@@ -30,6 +30,8 @@ class ShowManagerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'nome' => 'required',
+            'descricao' => 'required',
             'qtd_ingressos' => 'required',
             'data' => 'required',
             'horario_i' => 'required',
@@ -42,6 +44,8 @@ class ShowManagerController extends Controller
 
         // Requisitar os campos no cadastro
         $show = new Show;
+        $show->nome = $request->nome;
+        $show->descricao = $request->descricao;
         $show->qtd_ingressos = $request->qtd_ingressos;
         $show->data = $request->data;
         $show->horario_i = $request->horario_i;
@@ -74,6 +78,8 @@ class ShowManagerController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
+            'nome' => 'required',
+            'descricao' => 'required',
             'qtd_ingressos' => 'required',
             'data' => 'required',
             'horario_i' => 'required',

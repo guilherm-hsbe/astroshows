@@ -1,63 +1,70 @@
 .img-back {
     background-image: url("https://static.itapemafm.com.br/s3fs-public/graphql-upload-files/11%20Those%20Girls%20%5BApple%20ProRes%20422%20HQ%5D%20%28Live%20in%20Studio%29.00_00_54_22.Still003_5.jpg?z92Ayst7OLVKSTpe3hIxDatchDqHlhcd");
-  }
+}
   
-  .img-backgroundingressos {
-    height: max-content;
-    background-image: url("https://wallpaper.dog/large/10797041.jpg");
-  }
+.img-backgroundingressos {
+  height: max-content;
+  background-image: url("https://wallpaper.dog/large/10797041.jpg");
+}
 
-  .img-locais {
-    object-fit: cover;
-    background-image: url('https://images.wallpaperscraft.com/image/single/concert_crowd_people_134866_1920x1080.jpg');
-  }
-  
-  .transp-input input, .transp-input textarea {
-    background-color: #171717ee !important;
-    color: rgb(240, 240, 240) !important;
-    border: 0 !important;
-  }
-  
-  .transp-input ::placeholder {
-    color:#ffffff8b
-  }
-  
-  .card-fit label {
-    background:#00000000 !important
-  }
-  
-  .card-fit img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px
-  }
-  
-  .card-fit input,label {
-    height: 100%;
-  }
-  
-  .text-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.img-locais {
+  object-fit: cover;
+  background-image: url('https://greenvillejournal.com/wp-content/uploads/2021/01/microphone-on-the-empty-dark-stage-before-concert-picture-id1025448948.jpg');
+}
 
-  .dark-div {
-    border-radius: 30px;
-    padding: 0.1rem;
-  }
-  .dark-div:hover {
-    transition: 0.2s;
-    background-color: #0f0f0f94;
-  }
-  .dark-div p {
-    font-size: 1.2rem;
-  }
+.transp-input input, .transp-input textarea {
+  background-color: #171717ee !important;
+  color: rgb(240, 240, 240) !important;
+  border: 0 !important;
+}
 
-  .div-local {
-    color:aliceblue;
-    background-color: #17262e;
+.transp-input ::placeholder {
+  color:#ffffff8b
+}
 
-    border-radius: 15px;
-  }
+.card-fit label {
+  background:#00000000 !important
+}
+
+.card-fit img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px
+}
+
+.card-fit input,label {
+  height: 100%;
+}
+
+.text-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dark-div {
+  border-radius: 30px;
+  padding: 0.1rem;
+}
+.dark-div:hover {
+  transition: 0.2s;
+  background-color: #0f0f0f94;
+}
+.dark-div p {
+  font-size: 1.2rem;
+}
+
+.div-local {
+  color:aliceblue;
+  background-color: #17262e;
+
+  border-radius: 15px;
+}
+
+.empty {
+  background-image: url('https://mybighornbasin.com/wp-content/uploads/2018/11/view-of-concert-vintage-microphone-stay-on-stage-in-empty-bar-under-spotlight-zoom-in_haq-xx-o_thumbnail-full01.png');
+  padding-top: 20%;
+  text-shadow: 2px 3px 10px #111111;
+  color: gainsboro;
+}
