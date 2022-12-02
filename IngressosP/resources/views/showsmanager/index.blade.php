@@ -33,8 +33,9 @@
             <td>{{ $show->data }}</td>
             <td>{{ $show->horario_i }}</td>
             <td>{{ $show->horario_f }}</td>
-            <td>{{ $show->artista_id }}</td>
-            <td>{{ $show->local_id }}</td>
+            <td>{{ $show->artista->nome_artistico}}</td>
+            <td>{{ $show->local->nLocal }}</td>
+          
             <td>
                 <form action="{{ route('showsmanager.destroy', $show->id) }}" method="POST">
 
