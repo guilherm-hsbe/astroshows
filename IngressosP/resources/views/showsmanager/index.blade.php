@@ -36,7 +36,7 @@
             <td>{{ $show->artista_id }}</td>
             <td>{{ $show->local_id }}</td>
             <td>
-                <form action="{{ route('showssmanager.destroy', $show->id) }}" method="POST">
+                <form action="{{ route('showsmanager.destroy', $show->id) }}" method="POST">
 
                     <a class="btn btn-info" href="{{ route('showsmanager.show', $show->id) }}">Exibir</a>
 
