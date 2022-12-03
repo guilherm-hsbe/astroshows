@@ -27,7 +27,7 @@
   <body>
     <!-- NavBar -------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-lg">
-      <a class="navbar-brand" href="#"><i class="bi bi-mic"></i> AstroShows</a>
+      <a class="navbar-brand" href="{{ route('site.home') }}"><i class="bi bi-mic"></i> AstroShows</a>
 
       <button
         class="navbar-toggler"

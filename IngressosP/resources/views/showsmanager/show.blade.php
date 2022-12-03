@@ -62,7 +62,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Artista:</strong>
-                {{ $show->artista_id }}
+                {{ $show->artista->nome_artistico }}
             </div>
         </div>
 
@@ -70,7 +70,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Local:</strong>
-                {{ $show->local_id }}
+                {{ $show->local->nLocal }}
             </div>
         </div>
     </div>
