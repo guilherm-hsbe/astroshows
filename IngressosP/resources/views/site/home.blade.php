@@ -19,8 +19,13 @@
         <p>Travis Scott é um rapper, cantor, compositor e produtor musical norte-americano.</p>
         <button type="button" class="btn btn-outline-light" onclick="myFunction()"><i class="bi bi-arrow-bar-down"></i></button>
 
-        <div id="myDIV" >
-          Preço: $200
+        <div id="myDIV" style="display: flex;
+                              justify-content: center;
+                              flex-direction:row ;
+                              align-items: center; gap:10px ">
+          <p>Preço: $200</p>
+          <p>Data: 21/10/2023</p>
+          <p>Horário: 21:00</p>
         </div>
 
         <script>
