@@ -25,6 +25,14 @@
         @csrf
 
         <div class="row">
+            
+            <!-- Nome do Show -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nome:</strong>
+                    <input type="input" name="nome" class="form-control">
+                </div>
+            </div>
 
             <!-- //* Qtde Ingressos -->
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -77,9 +85,9 @@
                         @endforeach
                     </select>
 
-                    <select class="form-control" type="input" name="nome_artistico">
+                    <select class="form-control" type="input" name="nome_artistico" hidden>
                         @foreach ($artistas as $artista)
-                        <option value="{{ $artista->nome_artistico }}">{{ $artista->nome_artistico }}</option>
+                        <option value="{{ $artista->nome_artistico }}" hidden>{{ $artista->nome_artistico }}</option>
                         
                         @endforeach
                     </select>

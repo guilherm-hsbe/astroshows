@@ -9,28 +9,42 @@
     <a class="btn btn-primary" href="{{ route('showsmanager.index') }}"> Voltar</a>
     <p></p>
     @if ($errors->any())
-        <p></p>
-        <div class="alert alert-danger">
-            <strong>Ops!</strong> Houve algum problema com a entrada de dados.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+    <p></p>
+    <div class="alert alert-danger">
+        <strong>Ops!</strong> Houve algum problema com a entrada de dados.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
     @endif
 
-    <form action="{{ route('artistasmanager.update', $artista) }}" method="POST">
+    <form action="{{ route('showsmanager.update', $show) }}" method="POST">
         @csrf
         @method('PUT')
 
-         <div class="row">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nome:</strong>
+                    <input type="input" name="nome" class="form-control">
+                </div>
+            </div>
 
             <!-- //* QtdeIngressos -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Quantidade de Ingressos (Capacidade):</strong>
-                    <input type="input" name="qtd_ingressos" class="form-control" value="{{ $show->qtd_ingressos }}"> 
+                    <input type="input" name="qtd_ingressos" class="form-control" value="{{ $show->qtd_ingressos }}">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Descrição:</strong>
+                    <input type="input" name="descricao" class="form-control">
                 </div>
             </div>
 
@@ -61,26 +75,42 @@
             <!-- //* Artista -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Artista:</strong>
-                    <select class="form-control" type="input" name="artista_id" value="{{ $show->artista_id }}">
-                        <option value=""></option>
+                    <strong>Artista: </strong>
+                    <select class="form-control" type="input" name="artista_id">
+                        @foreach ($artistas as $artista)
+                        <option value="{{ $artista->id }}">{{ $artista->nome_artistico }}</option>
+
+                        @endforeach
                     </select>
+
+                    <select class="form-control" type="input" name="nome_artistico" hidden>
+                        @foreach ($artistas as $artista)
+                        <option value="{{ $artista->nome_artistico }}" hidden>{{ $artista->nome_artistico }}</option>
+
+                        @endforeach
+                    </select>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <strong>Imagem:</strong>
+                            <input type="file" name="imagem" class="form-control" placeholder="Imagem">
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- //* Local -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Local:</strong>
-                    <select class="form-control" type="input" name="local_id" value="{{ $show->local_id }}">
-                        <option value=""></option>
+                    <select class="form-control" type="input" name="local_id">
+                        @foreach ($locais as $local)
+                            <option value="{{ $local->id }}">{{ $local->nLocal }}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
 
             <!-- //? Atualizar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Atualizar</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
             </div>
         </div>
 

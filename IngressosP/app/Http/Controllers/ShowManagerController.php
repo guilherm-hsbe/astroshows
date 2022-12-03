@@ -70,8 +70,9 @@ class ShowManagerController extends Controller
     public function edit($id)
     {
         $show = Show::findOrFail($id);
-
-        return view('showsmanager.edit',compact('show'));
+        $artistas = Artista::all();
+        $locais = Local::all();
+        return view('showsmanager.edit',compact('show', 'artistas', 'locais'));
     }
 
     // * UPDATE ---------------------------------|
