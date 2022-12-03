@@ -19,6 +19,7 @@
         <p>Travis Scott é um rapper, cantor, compositor e produtor musical norte-americano.</p>
         <button type="button" class="btn btn-outline-light" onclick="myFunction()"><i class="bi bi-arrow-bar-down"></i></button>
 
+        <!-- Div escondida com detalhes do travis -->
         <div id="myDIV" style="display: flex;
                               justify-content: center;
                               flex-direction:row ;
@@ -27,7 +28,7 @@
           <p>Data: 21/10/2023</p>
           <p>Horário: 21:00</p>
         </div>
-
+        <!-- Script do Travis -->
         <script>
           function myFunction() {
             var x = document.getElementById("myDIV");
@@ -38,6 +39,7 @@
             }
           }
         </script>
+        <!--  -->
       </div>
     </div>
 
@@ -47,7 +49,31 @@
       <div class="carousel-caption d-none d-md-block">
         <h3>Skrillex</h3>
         <p>Skrillex é um premiado produtor musical, cantor e compositor norte americano de música eletrônica.</p>
-        <button type="button" class="btn btn-outline-light">Ver Ingressos</button>
+        <button type="button" class="btn btn-outline-light" onclick="myFunction2()"><i class="bi bi-arrow-bar-down"></i></button>
+        
+        <!-- Div escondida com detalhes do Skrillex -->
+        <div id="myDIV1" style="display: flex;
+                              justify-content: center;
+                              flex-direction:row ;
+                              align-items: center; gap:10px ">
+          <p>Preço: $100</p>
+          <p>Data: 21/10/2023</p>
+          <p>Horário: 21:00</p>
+        </div>
+
+        <!-- Script do Skrillex -->
+        <script>
+          function myFunction2() {
+            var x = document.getElementById("myDIV1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
+        <!--  -->
+
       </div>
     </div>
 
@@ -57,10 +83,33 @@
       <div class="carousel-caption d-none d-md-block">
         <h3>Kendrick Lamar</h3>
         <p>Kendrick Lamar é um rapper, produtor musical e compositor, considerado como um dos artistas mais influentes de sua geração.</p>
-        <button type="button" class="btn btn-outline-light">Ver Ingressos</button>
+        <button type="button" class="btn btn-outline-light" onclick="myFunction3()"><i class="bi bi-arrow-bar-down"></i></button>
+        <!-- Div escondida com detalhes do Kendrão -->
+        <div id="myDIV3" style="display: flex;
+                              justify-content: center;
+                              flex-direction:row ;
+                              align-items: center; gap:10px ">
+          <p>Preço: $300</p>
+          <p>Data: 21/10/2023</p>
+          <p>Horário: 21:00</p>
+        </div>
+
+        <!-- Script do Lamar -->
+        <script>
+          function myFunction3() {
+            var x = document.getElementById("myDIV3");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
+        <!--  -->
       </div>
     </div>
   </div>
+
 
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
