@@ -36,11 +36,6 @@
       </div>
     </div>
 
-
-
-
-
-
     <div class="carousel-item" data-interval="10000">
       <img class="d-block w-100" src="{{ Vite::asset('resources/images/artistas/skrillex.jpg') }}" alt="Second slide">
 
