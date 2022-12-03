@@ -57,7 +57,7 @@
                               flex-direction:row ;
                               align-items: center; gap:10px ">
           <p>Preço: $100</p>
-          <p>Data: 21/10/2023</p>
+          <p>Data: 10/01/2023</p>
           <p>Horário: 21:00</p>
         </div>
 
@@ -90,8 +90,8 @@
                               flex-direction:row ;
                               align-items: center; gap:10px ">
           <p>Preço: $300</p>
-          <p>Data: 21/10/2023</p>
-          <p>Horário: 21:00</p>
+          <p>Data: 10/10/2023</p>
+          <p>Horário: 20:00</p>
         </div>
 
         <!-- Script do Lamar -->
