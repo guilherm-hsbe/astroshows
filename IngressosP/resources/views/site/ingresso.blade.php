@@ -16,8 +16,8 @@
       <div class="form-group">
         <label for="show" style="color:White">Show</label>
         <input type="show" class="form-control" id="show" aria-describedby="emailHelp"
-          value="{{ session('nome_artistico') }}" readonly>
-        <small id="show" style="color:White">Você escolheu show do {{ ('nome_artistico') }}</small>
+          value="" readonly>
+        <small id="show" style="color:White">Você escolheu show do </small>
       </div>
       <!-- Fim Nome do show -->
       <!-- Preço -->
