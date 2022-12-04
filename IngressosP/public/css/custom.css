@@ -53,7 +53,7 @@
 }
 .dark-div:hover {
   transition: 0.5s;
-  background-color: #0f0f0fa8;
+  background-color: #0f0f0fd5;
 }
 .dark-div p {
   font-size: 1.2rem;

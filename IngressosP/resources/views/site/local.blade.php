@@ -22,7 +22,7 @@
       <img class="d-block w-100" src="{{ asset($local->imagem) }}" alt="">
 
       <div class="carousel-caption d-none d-md-block mb-2 dark-div p-2">
-          <h2>{{ $local->nlocal }}</h2>
+          <h2>{{ $local->nLocal }}</h2>
           <p>{{ $local->endereco }}, {{ $local->bairro }}, {{ $local->numero }}</p>
           <p>{{ $local->cidade }}, {{ $local->estado }}, {{ $local->cep }}</p>
       </div>
