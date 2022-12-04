@@ -26,7 +26,7 @@
 
         <div class="row">
             
-            <!-- Nome do Show -->
+            <!--//* Nome do Show -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome:</strong>
@@ -34,15 +34,7 @@
                 </div>
             </div>
 
-            <!-- //* Qtde Ingressos -->
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Quantidade de Ingressos (Capacidade):</strong>
-                    <input type="input" name="qtd_ingressos" class="form-control">
-                </div>
-            </div>
-
-            <!-- Descrição -->
+            <!--//* Descrição -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descrição:</strong>
@@ -55,6 +47,14 @@
                 <div class="form-group">
                     <strong>Data:</strong>
                     <input class="form-control" type="input" name="data">
+                </div>
+            </div>
+
+            <!--//* Qtde Ingressos -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Quantidade de Ingressos (Capacidade):</strong>
+                    <input type="input" name="qtd_ingressos" class="form-control">
                 </div>
             </div>
 
@@ -91,12 +91,6 @@
                         
                         @endforeach
                     </select>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Imagem:</strong>
-                            <input type="file" name="imagem" class="form-control" placeholder="Imagem">
-                        </div>
-                    </div>
                 </div>
             </div>
 

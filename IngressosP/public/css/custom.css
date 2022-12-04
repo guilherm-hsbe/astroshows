@@ -64,3 +64,11 @@
   background-color: #17262e;
   border-radius: 15px;
 }
+
+.div-coll {
+  transition: 0.3s;
+}
+
+.div-coll p, h5{
+  margin: 0;
+}

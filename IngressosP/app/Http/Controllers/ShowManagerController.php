@@ -54,7 +54,7 @@ class ShowManagerController extends Controller
         $show->artista_id = $request->artista_id;
         $show->local_id = $request->local_id;
         $show->imagem = ""; #opcional
-        $dirImage = "images/artistas";
+        $dirImage = "images/shows";
 
         if($request->hasFile('imagem') && $request->file('imagem')->isValid()){
             $requestImage = $request->imagem;

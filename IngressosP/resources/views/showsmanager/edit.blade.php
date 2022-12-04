@@ -26,10 +26,19 @@
 
         <div class="row">
 
+            <!-- //* Nome -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome:</strong>
-                    <input type="input" name="nome" class="form-control">
+                    <input type="input" name="nome" class="form-control" value="{{ $show->nome }}">
+                </div>
+            </div>
+
+            <!-- //* Descricao -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Descrição:</strong>
+                    <input type="input" name="descricao" class="form-control" value="{{ $show->descricao }}">
                 </div>
             </div>
 
@@ -38,13 +47,6 @@
                 <div class="form-group">
                     <strong>Quantidade de Ingressos (Capacidade):</strong>
                     <input type="input" name="qtd_ingressos" class="form-control" value="{{ $show->qtd_ingressos }}">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Descrição:</strong>
-                    <input type="input" name="descricao" class="form-control">
                 </div>
             </div>
 
@@ -89,14 +91,10 @@
 
                         @endforeach
                     </select>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Imagem:</strong>
-                            <input type="file" name="imagem" class="form-control" placeholder="Imagem">
-                        </div>
-                    </div>
                 </div>
             </div>
+
+            <!-- //* Local -->
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Local:</strong>
