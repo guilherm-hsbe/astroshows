@@ -16,6 +16,9 @@ use App\Http\Controllers\ContatoManagerController;
 use App\Http\Controllers\ShowManagerController;
 use App\Http\Controllers\LocalManagerController;
 
+//! Models
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,7 +56,8 @@ Route::resource('showsmanager',ShowManagerController::class); //CRUD shows
 
 //? Dashboard
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $users = User::all();
+    return view('dashboard',compact('users'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 //? Auth

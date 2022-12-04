@@ -1,7 +1,6 @@
 <x-app-layout>
 @extends('site.layout')
 @section('content')
-
     <div class="d-flex justify-content-center align-items-center mt-3 list-group">
         <div class="mb-3">
             <a class="nav-link btn btn-dark" href="{{ route('site.home') }}">Home</a>
