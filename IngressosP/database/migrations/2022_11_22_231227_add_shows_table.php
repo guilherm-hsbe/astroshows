@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('data');
             $table->string('horario_i');
             $table->string('horario_f');
+            $table->string('imagem');
             $table->foreignId('artista_id')->constrained('artistas');
             $table->foreignId('local_id')->constrained('locais');
             $table->timestamps();

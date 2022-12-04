@@ -15,6 +15,7 @@ class Show extends Model
         'data',
         'horario_i',
         'horario_f',
+        'imagem',
         'artista_id',
         'local_id',        
     ];

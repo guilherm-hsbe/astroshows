@@ -38,6 +38,7 @@ class ShowManagerController extends Controller
             'horario_f' => 'required',
             'artista_id' => 'required',
             'local_id' => 'required',
+            'imagem' => 'required',
         ]);
 
         // Artista::create($request->all());
@@ -52,6 +53,20 @@ class ShowManagerController extends Controller
         $show->horario_f = $request->horario_f;
         $show->artista_id = $request->artista_id;
         $show->local_id = $request->local_id;
+        $show->imagem = ""; #opcional
+        $dirImage = "images/artistas";
+
+        if($request->hasFile('imagem') && $request->file('imagem')->isValid()){
+            $requestImage = $request->imagem;
+            $extension = $requestImage->extension();
+
+            // Hash para gerar nome da imagem com data e hora. (Não difere dos outros arquivos)
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . "." . $extension;
+            
+            // Mover a imagem
+            $requestImage->move(public_path($dirImage), $imageName);
+            $show->imagem = $dirImage . "/" . $imageName;
+        };
 
         $show->save();
 
@@ -87,6 +102,7 @@ class ShowManagerController extends Controller
             'horario_f' => 'required',
             'artista_id' => 'required',
             'local_id' => 'required',
+            'imagem' => 'required',
         ]);
 
         $data = $request->all();

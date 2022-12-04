@@ -112,6 +112,14 @@
                 </div>
             </div>
 
+            <!-- //* Imagem -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Imagem:</strong>
+                    <input type="file" name="imagem" class="form-control" placeholder="Imagem">
+                </div>
+            </div>
+
             <!-- //? Cadastrar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-success">Cadastrar</button>
