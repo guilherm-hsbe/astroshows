@@ -44,6 +44,15 @@
                 <h5>Quantidade de Ingressos</h5>
                 <p>{{ $show->qtd_ingressos }}</p>
               </div>
+
+              @if(session('msg'))
+                <p class="msg bg-transparent" style="border-radius: 8px;">{{ session('msg') }}</p>
+                <p></p>
+              @endif
+              <form method="post">
+                @csrf
+                <button type="submit" class="btn btn-outline-light mt-2" value="Enviar">Comprar</button>
+              </form>
             </div>
           </div>
 

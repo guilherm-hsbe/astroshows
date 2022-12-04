@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('show_id')->constrained('shows');
-            $table->decimal('preco');
-            $table->dateTime('data_compra');
             $table->timestamps();
         });
     }

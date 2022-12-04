@@ -9,8 +9,6 @@ class Ingresso extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'preco',
-        'data_compra',
         'user_id',
         'show_id'
     ];

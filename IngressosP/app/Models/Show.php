@@ -30,7 +30,6 @@ class Show extends Model
     public function ingressosShow(){
 
         return $this->belongsToMany(User::class, 'ingressos', 'shows_id', 'users_id')
-                        ->withPivot('preco','data_compra')
                         ->withTimestamps();
     }
 }

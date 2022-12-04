@@ -33,6 +33,7 @@ use App\Models\User;
 //* Gerais
 Route::get('/',[AutentController::class,'home'])->name('site.autent');
 Route::get('/home',[HomeController::class,'home'])->name('site.home');
+Route::post('/home',[HomeController::class,'store'])->name('site.home');
 
 //* Artistas
 Route::get('/artista',[ArtistaController::class,'artista'])->name('site.artista');
