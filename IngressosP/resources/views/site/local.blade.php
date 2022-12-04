@@ -2,38 +2,46 @@
 
 @section('content')
 
-@if (!empty($locais))
+<?php if(count($locais) == 0){ ?>
   <div class="empty w-100 text-center"  style="height:94.2vh">
     <h2><i class="bi bi-plug-fill"></i> Nada Por Aqui...</h2>
   </div>
   
-@else
-<div class="row img-locais m-0" style="height: 94.2vh;">
-  <div class="col"></div>
+<?php } else { ?>
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner" style="height:94.2vh">
 
-  <div class="col-6">
-
+    <?php $i = 0; ?>
     @foreach ($locais as $local)
-      <div class="featurette mb-5 shadow-lg div-local p-5 mt-5">
-        <div class="">
-            <h1 class="featurette-heading"><i class="bi bi-building"></i> {{ $local->nLocal }}</h1>
-            <h4>{{ $local->endereco }}, {{ $local->bairro }}, {{ $local->numero }}</h4>
+    @if ($i == 0)
+      <div class="carousel-item active" data-interval="10000">
+      <?php $i++; ?>
+    @else
+      <div class="carousel-item" data-interval="10000">
+    @endif
+      <img class="d-block w-100" src="{{ asset($local->imagem) }}" alt="">
 
-            <hr class="my-4 bg-light">
-
-            <p class="lead">{{ $local->cidade  }} - {{ $local->estado }}</p>
-            <!-- <p class="lead"></p> -->
-            <p class="lead">{{ $local->cep }}</p>
-        </div>
+      <div class="carousel-caption d-none d-md-block mb-2 dark-div p-2">
+          <h2>{{ $local->nlocal }}</h2>
+          <p>{{ $local->endereco }}, {{ $local->bairro }}, {{ $local->numero }}</p>
+          <p>{{ $local->cidade }}, {{ $local->estado }}, {{ $local->cep }}</p>
       </div>
-      <hr class="featurette-divider">
+    </div>
     @endforeach
 
   </div>
 
-  <div class="col"></div>
+  <!-- Buttons -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
 </div>
 
-@endif
+<?php }; ?>
 
 @endsection

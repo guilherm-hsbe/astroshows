@@ -80,6 +80,14 @@
                 </div>
             </div>
 
+            <!-- //* Imagem -->
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Imagem:</strong>
+                    <input type="text" name="imagem" value="{{ $local->imagem }}" class="form-control mb-2" placeholder="Imagem">
+                </div>
+            </div>
+
             <!-- //? Atualizar -->
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Atualizar</button>

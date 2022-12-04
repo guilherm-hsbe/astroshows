@@ -33,6 +33,7 @@ class LocalManagerController extends Controller
             'cidade' => 'required',
             'estado' => 'required',
             'cep' => 'required',
+            'imagem' => 'required'
         ]);
 
         // Requisitar os campos no cadastro
@@ -44,6 +45,20 @@ class LocalManagerController extends Controller
         $local->cidade = $request->cidade;
         $local->estado = $request->estado;
         $local->cep = $request->cep;
+        $local->imagem = ""; #opcional
+        $dirImage = "images/locais";
+
+        if($request->hasFile('imagem') && $request->file('imagem')->isValid()){
+            $requestImage = $request->imagem;
+            $extension = $requestImage->extension();
+
+            // Hash para gerar nome da imagem com data e hora. (Não difere dos outros arquivos)
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now')) . "." . $extension;
+            
+            // Mover a imagem
+            $requestImage->move(public_path($dirImage), $imageName);
+            $local->imagem = $dirImage . "/" . $imageName;
+        };
 
         $local->save();
 
@@ -77,6 +92,7 @@ class LocalManagerController extends Controller
             'cidade' => 'required',
             'estado' => 'required',
             'cep' => 'required',
+            'imagem' => 'required'
         ]);
 
         $data = $request->all();

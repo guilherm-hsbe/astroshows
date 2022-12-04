@@ -2,12 +2,12 @@
 
 @section('content')
 
-@if (!empty($artistas))
+<?php if(count($artistas) == 0){ ?>
   <div class="empty w-100 text-center"  style="height:94.2vh">
     <h2><i class="bi bi-plug-fill"></i> Nada Por Aqui...</h2>
   </div>
   
-@else
+<?php } else { ?>
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner" style="height:94.2vh">
 
@@ -41,6 +41,6 @@
   </a>
 </div>
 
-@endif
+<?php }; ?>
 
 @endsection  

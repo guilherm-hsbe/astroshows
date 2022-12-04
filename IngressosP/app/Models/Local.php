@@ -18,5 +18,6 @@ class Local extends Model
         'cidade',
         'estado',
         'cep',
+        'imagem',
     ];
 }

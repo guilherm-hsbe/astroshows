@@ -11,7 +11,7 @@
 }
 
 .carousel-item {
-    transition: transform 2.6s ease-in-out;
+    transition: transform 2s ease-in-out;
   }
   
 .carousel-fade .active.carousel-item-start,
@@ -21,12 +21,12 @@ transition: opacity 0s 2.6s;
 
 .carousel-control-prev:hover{
     background: linear-gradient(90deg, rgba(0,0,0,0.22452731092436973) 0%, rgba(255,255,255,0) 75%);;
-    transition: 1s;
+    transition: 1.5s;
 }
 
 .carousel-control-next:hover{
     background: linear-gradient(270deg, rgba(0,0,0,0.22452731092436973) 0%, rgba(255,255,255,0) 75%);;
-    transition: 1s;
+    transition: 1.5s;
 }
 
   [type=radio] {

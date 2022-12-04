@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("cidade", 50);
             $table->string("estado", 40);
             $table->integer("cep");
+            $table->string('imagem');
             $table->timestamps();
         });
     }
