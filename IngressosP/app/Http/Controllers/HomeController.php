@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Show;
 use App\Models\Ingresso;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -13,8 +14,13 @@ class HomeController extends Controller
         return view ('site.home',compact('shows'));
     }
 
-    public function store(){
+    public function store(Request $request){
+        $shows = Show::all();
+        $users = User::all();
+
         $ingresso = new Ingresso;
+        $ingresso->shows_id = $request->$shows->show->id;
+        $ingresso->users_id = $request->$users->user->id;
 
         try {
             $ingresso->save();

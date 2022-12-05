@@ -9,7 +9,7 @@ class Ingresso extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id',
-        'show_id'
+        'users_id',
+        'shows_id'
     ];
 }
