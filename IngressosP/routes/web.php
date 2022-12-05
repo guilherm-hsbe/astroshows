@@ -15,7 +15,7 @@ use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\ContatoManagerController;
 use App\Http\Controllers\ShowManagerController;
 use App\Http\Controllers\LocalManagerController;
-
+use App\Http\Controllers\PdfController;
 //! Models
 use App\Models\User;
 
@@ -52,7 +52,6 @@ Route::post('/contatos',[ContatoController::class,'store'])->name('site.contatos
 Route::resource('contatosmanager',ContatoManagerController::class); //CRUD contatos
 
 //* Shows
-Route::get('/show',[ShowController::class,'show'])->name('site.show');
 Route::resource('showsmanager',ShowManagerController::class); //CRUD shows
 
 //? Dashboard
