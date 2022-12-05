@@ -7,6 +7,9 @@ use App\Models\Show;
 use App\Models\Ingresso;
 use App\Models\User;
 
+use Illuminate\Support\Facades\App;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class HomeController extends Controller
 {
     public function home(){
