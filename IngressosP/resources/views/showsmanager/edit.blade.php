@@ -30,7 +30,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nome:</strong>
-                    <input type="input" name="nome" class="form-control" value="{{ $show->nome }}">
+                    <input type="input" name="nome" class="form-control" value="{{ $show->nome }}" maxlength="100">
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descrição:</strong>
-                    <input type="input" name="descricao" class="form-control" value="{{ $show->descricao }}">
+                    <input type="input" name="descricao" class="form-control" value="{{ $show->descricao }}" maxlength="200">
                 </div>
             </div>
 
