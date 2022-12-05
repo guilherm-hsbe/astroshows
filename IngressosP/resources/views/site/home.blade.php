@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('content')
-
+          
 <?php if(count($shows) == 0){ ?>
   <div class="empty w-100 text-center"  style="height:94.2vh">
     <h2><i class="bi bi-plug-fill"></i> Nada Por Aqui...</h2>
@@ -49,10 +49,19 @@
                 <p class="msg bg-transparent" style="border-radius: 8px;">{{ session('msg') }}</p>
                 <p></p>
               @endif
-              <form method="post">
-                @csrf
-                <button type="submit" class="btn btn-outline-light mt-2" value="Enviar">Comprar</button>
+              
+              <form>
+                <!-- Botão de alert -->
+                <button type="button" class="btn btn-outline-light mt-2" onclick="alerta()">Comprar</button>
               </form>
+
+              <!-- Script cria o alert -->
+              <script>
+                function alerta() {
+                  alert("Ingresso Comprado!");
+                }
+              </script> 
+                             
             </div>
           </div>
 
