@@ -18,21 +18,21 @@ class HomeController extends Controller
     }
 
     public function store(Request $request){
-        $shows = Show::all();
-        $users = User::all();
+        // $shows = Show::all();
+        // $users = User::all();
 
-        $ingresso = new Ingresso;
-        $ingresso->shows_id = $request->$shows->show->id;
-        $ingresso->users_id = $request->$users->user->id;
+        // $ingresso = new Ingresso;
+        // $ingresso->shows_id = $request->$shows->show->id;
+        // $ingresso->users_id = $request->$users->user->id;
 
-        try {
-            $ingresso->save();
+        // try {
+        //     $ingresso->save();
 
-            return redirect()->action([HomeController::class,'home'])
-                                    ->with('msg','Compra realizada!');
-        } catch (\Exception $e) {
-            return redirect()->action([HomeController::class,'home'])
-                                    ->with('msg','Não possível efetuar a compra do ingresso...');
-        }
+        //     return redirect()->action([HomeController::class,'home'])
+        //                             ->with('msg','Compra realizada!');
+        // } catch (\Exception $e) {
+        //     return redirect()->action([HomeController::class,'home'])
+        //                             ->with('msg','Não possível efetuar a compra do ingresso...');
+        // }
     }
 }
