@@ -1,4 +1,4 @@
-# Projeto-Prog-WEB
+# Projeto AstroShows
 🎓 Repositório de código fonte do projeto de 2º bimestre da disciplina de Eletiva Programação WEB
 
 > O conceito da aplicação é destinado à venda de ingressos para shows musicais.
